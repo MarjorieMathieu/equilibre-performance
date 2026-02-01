@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -790,7 +789,7 @@
     <!-- Navigation -->
     <nav>
         <a href="#" class="logo">
-            <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/dbcef024-d04b-4b01-a336-3e293ca7d0f5" alt="Marjorie Mathieu">
+            <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/ee08daf1-d762-4b27-8e33-a608e7494a35" alt="Marjorie Mathieu">
             <span>Marjorie Mathieu</span>
         </a>
         <a href="mailto:hello@marjoriemathieu.be?subject=Réservation%20place%20pilote%20Équilibre%20Performance" class="btn-primary">Je teste — 800€ →</a>
@@ -992,7 +991,7 @@
     <!-- About -->
     <div class="about-section">
         <div class="about-content fade-in">
-            <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/dbcef024-d04b-4b01-a336-3e293ca7d0f5" alt="Marjorie Mathieu" class="about-logo">
+            <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/ee08daf1-d762-4b27-8e33-a608e7494a35" alt="Marjorie Mathieu" class="about-logo">
             <div class="about-text">
                 <h2>Marjorie Mathieu</h2>
                 <p class="quote">15 ans corporate belge. 10 ans pratique collective. Je ne vous vends pas du bien-être — je transforme votre culture opérationnelle.</p>
