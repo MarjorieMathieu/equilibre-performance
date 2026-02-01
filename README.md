@@ -1,2 +1,1063 @@
 # equilibre-performance
 Landing page Équilibre Performance
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Équilibre Performance — Marjorie Mathieu | Culture d'entreprise qui retient vos talents</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy: #1a2744;
+            --coral: #e07a5f;
+            --cream: #f5f0eb;
+            --silver: #c5c5c5;
+            --white: #ffffff;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: var(--navy);
+            background-color: var(--cream);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(245, 240, 235, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(26, 39, 68, 0.08);
+        }
+
+        nav .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        nav .logo img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+        }
+
+        nav .logo span {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        .btn-primary {
+            background: var(--coral);
+            color: var(--white);
+            padding: 0.875rem 1.75rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary:hover {
+            background: #d66b50;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(224, 122, 95, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            padding: 0.875rem 1.75rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--navy);
+            color: var(--white);
+            padding: 8rem 5% 5rem;
+            margin-top: 70px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(224, 122, 95, 0.15);
+            border: 1px solid var(--coral);
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.85; }
+        }
+
+        .badge .dot {
+            width: 8px;
+            height: 8px;
+            background: #4ade80;
+            border-radius: 50%;
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+
+        .hero .subtitle {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.25rem;
+            flex-wrap: wrap;
+        }
+
+        .stats-cards {
+            display: grid;
+            gap: 1.25rem;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            padding: 1.75rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateX(5px);
+        }
+
+        .stat-card .number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--coral);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card .label {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+
+        .stat-card .source {
+            font-size: 0.75rem;
+            opacity: 0.6;
+            margin-top: 0.5rem;
+        }
+
+        /* Bande Chiffres */
+        .alert-band {
+            background: var(--cream);
+            padding: 3rem 5%;
+            border-top: 3px solid var(--coral);
+            border-bottom: 3px solid var(--coral);
+        }
+
+        .alert-numbers {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .alert-item {
+            text-align: center;
+        }
+
+        .alert-item .big-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--coral);
+            margin-bottom: 0.75rem;
+        }
+
+        .alert-item .description {
+            font-size: 1rem;
+            color: var(--navy);
+            line-height: 1.6;
+        }
+
+        .alert-item .source {
+            font-size: 0.8rem;
+            opacity: 0.6;
+            margin-top: 0.5rem;
+        }
+
+        /* Section */
+        section {
+            padding: 5rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: var(--navy);
+        }
+
+        section .section-subtitle {
+            text-align: center;
+            font-size: 1.15rem;
+            opacity: 0.75;
+            margin-bottom: 4rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Rituels Grid */
+        .rituels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .rituel-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(26, 39, 68, 0.08);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .rituel-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(26, 39, 68, 0.15);
+            border-color: var(--coral);
+        }
+
+        .rituel-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--coral);
+            margin-bottom: 1rem;
+            opacity: 0.3;
+        }
+
+        .rituel-card h3 {
+            font-size: 1.75rem;
+            margin-bottom: 0.75rem;
+            color: var(--navy);
+        }
+
+        .rituel-card .duration {
+            font-size: 0.9rem;
+            color: var(--coral);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .rituel-card .description {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 1.25rem;
+            opacity: 0.8;
+        }
+
+        .rituel-card .impact {
+            font-weight: 500;
+            color: var(--navy);
+            padding-top: 1rem;
+            border-top: 2px solid var(--cream);
+        }
+
+        .rituel-card .impact::before {
+            content: '→ ';
+            color: var(--coral);
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 1rem;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--coral), var(--navy));
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-left: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.5rem;
+            top: 0.5rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            background: var(--coral);
+            border-radius: 50%;
+            border: 4px solid var(--cream);
+        }
+
+        .timeline-item h3 {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+            color: var(--navy);
+        }
+
+        .timeline-item .phase-duration {
+            display: inline-block;
+            background: var(--navy);
+            color: var(--white);
+            padding: 0.35rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-item p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            opacity: 0.8;
+        }
+
+        /* ROI Table */
+        .roi-table {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 30px rgba(26, 39, 68, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .roi-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .roi-table thead {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .roi-table th {
+            padding: 1.5rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+
+        .roi-table td {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--cream);
+        }
+
+        .roi-table tbody tr:hover {
+            background: rgba(224, 122, 95, 0.05);
+        }
+
+        .roi-table .highlight {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--coral);
+        }
+
+        .roi-note {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            font-style: italic;
+            text-align: center;
+        }
+
+        /* Garantie Block */
+        .garantie-block {
+            background: var(--navy);
+            color: var(--white);
+            padding: 4rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 8px 40px rgba(26, 39, 68, 0.2);
+        }
+
+        .garantie-block h3 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+
+        .garantie-block p {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+
+        /* Pricing Card */
+        .pricing-section {
+            background: var(--cream);
+            padding: 5rem 5%;
+        }
+
+        .pricing-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: var(--navy);
+            color: var(--white);
+            padding: 3.5rem;
+            border-radius: 20px;
+            box-shadow: 0 12px 50px rgba(26, 39, 68, 0.25);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(224, 122, 95, 0.1) 0%, transparent 70%);
+        }
+
+        .pricing-badge {
+            display: inline-block;
+            background: var(--coral);
+            color: var(--white);
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-card .price {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 5rem;
+            font-weight: 700;
+            color: var(--coral);
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-card .price-label {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            margin-bottom: 2.5rem;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            margin-bottom: 2.5rem;
+            text-align: left;
+        }
+
+        .pricing-card li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .pricing-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--coral);
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+
+        .pricing-card .btn-primary {
+            width: 100%;
+            padding: 1.25rem;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* A Propos */
+        .about-section {
+            background: var(--white);
+            padding: 5rem 5%;
+        }
+
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-logo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+
+        .about-text h2 {
+            text-align: left;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text .quote {
+            font-size: 1.35rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .tags {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: var(--cream);
+            color: var(--navy);
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--navy);
+            color: var(--white);
+            padding: 3rem 5%;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-info {
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+        }
+
+        .footer-info a {
+            color: var(--coral);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-info a:hover {
+            opacity: 0.8;
+        }
+
+        .footer-copyright {
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+
+        /* Fade-in animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            nav {
+                padding: 1rem 3%;
+            }
+
+            nav .logo span {
+                font-size: 1.2rem;
+            }
+
+            .btn-primary, .btn-secondary {
+                padding: 0.75rem 1.25rem;
+                font-size: 0.9rem;
+            }
+
+            .hero {
+                padding: 6rem 3% 4rem;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            section {
+                padding: 4rem 3%;
+            }
+
+            section h2 {
+                font-size: 2.25rem;
+            }
+
+            .alert-numbers {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .alert-item .big-number {
+                font-size: 2.75rem;
+            }
+
+            .rituels-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .about-logo {
+                margin: 0 auto;
+            }
+
+            .about-text h2 {
+                text-align: center;
+            }
+
+            .tags {
+                justify-content: center;
+            }
+
+            .garantie-block {
+                padding: 3rem 2rem;
+            }
+
+            .garantie-block h3 {
+                font-size: 2rem;
+            }
+
+            .pricing-card {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .pricing-card .price {
+                font-size: 4rem;
+            }
+
+            .roi-table th,
+            .roi-table td {
+                padding: 1rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .hero-buttons .btn-primary,
+            .hero-buttons .btn-secondary {
+                width: 100%;
+                text-align: center;
+            }
+
+            .timeline {
+                padding-left: 1.5rem;
+            }
+
+            .timeline::before {
+                left: 0.5rem;
+            }
+
+            .timeline-item {
+                padding-left: 1.5rem;
+            }
+
+            .timeline-item::before {
+                left: -1.5rem;
+            }
+
+            .roi-table {
+                font-size: 0.85rem;
+            }
+
+            .roi-table th,
+            .roi-table td {
+                padding: 0.75rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="logo">
+            <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/dbcef024-d04b-4b01-a336-3e293ca7d0f5" alt="Marjorie Mathieu">
+            <span>Marjorie Mathieu</span>
+        </a>
+        <a href="mailto:hello@marjoriemathieu.be?subject=Réservation%20place%20pilote%20Équilibre%20Performance" class="btn-primary">Je teste — 800€ →</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div>
+                <div class="badge">
+                    <span class="dot"></span>
+                    <span>Pilote mars 2026 — 3 places disponibles</span>
+                </div>
+                <h1>Arrêtez de perdre vos talents. Construisez une culture qui les garde.</h1>
+                <p class="subtitle">En 3 semaines, j'intègre des rituels collectifs dans votre quotidien qui boostent engagement, productivité et rétention. Concret. Mesurable. Qui tient.</p>
+                <div class="hero-buttons">
+                    <a href="mailto:hello@marjoriemathieu.be?subject=Réservation%20place%20pilote%20Équilibre%20Performance" class="btn-primary">Je réserve ma place →</a>
+                    <a href="#rituels" class="btn-secondary">Comment ça marche ↓</a>
+                </div>
+            </div>
+
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <div class="number">3×</div>
+                    <div class="label">meilleure rétention dans les entreprises avec une culture forte</div>
+                    <div class="source">Securex 2024</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">+39%</div>
+                    <div class="label">de productivité pour les équipes engagées vs désengagées</div>
+                    <div class="source">Securex 2024</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">80 000€</div>
+                    <div class="label">coût de l'absentéisme par an pour 50 employés</div>
+                    <div class="source">SD Worx 2024</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bande Chiffres -->
+    <div class="alert-band">
+        <div class="alert-numbers">
+            <div class="alert-item">
+                <div class="big-number">40%</div>
+                <div class="description">des professionnels belges à risque</div>
+                <div class="source">AG Insurance 2024</div>
+            </div>
+            <div class="alert-item">
+                <div class="big-number">+44%</div>
+                <div class="description">d'arrêts longue durée en 5 ans</div>
+                <div class="source">INAMI 2025</div>
+            </div>
+            <div class="alert-item">
+                <div class="big-number">2 Mds€</div>
+                <div class="description">versés en assurance indemnités en 2023</div>
+                <div class="source">INAMI 2024</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rituels -->
+    <section id="rituels">
+        <h2>4 rituels. Dans votre workflow. Pas à côté.</h2>
+        <div class="rituels-grid fade-in">
+            <div class="rituel-card">
+                <div class="rituel-number">01</div>
+                <h3>Radio Taiso</h3>
+                <div class="duration">10 min/matin</div>
+                <p class="description">70 ans chez Toyota, 27 millions de Japonais le pratiquent, zéro entreprise belge l'utilise.</p>
+                <p class="impact">Cohésion dès J1</p>
+            </div>
+
+            <div class="rituel-card">
+                <div class="rituel-number">02</div>
+                <h3>Pauses intelligentes</h3>
+                <div class="duration">5-10 min, 2×/jour</div>
+                <p class="description">Étirements + respiration après 90 minutes de concentration. Pas une pause café, un reset physiologique.</p>
+                <p class="impact">Concentration améliorée</p>
+            </div>
+
+            <div class="rituel-card">
+                <div class="rituel-number">03</div>
+                <h3>Time Blocking</h3>
+                <div class="duration">4h de formation</div>
+                <p class="description">Blocs de travail focalisés intégrés dans vos outils actuels. Pas une nouvelle méthode, une nouvelle discipline.</p>
+                <p class="impact">+2-3h de productivité/jour</p>
+            </div>
+
+            <div class="rituel-card">
+                <div class="rituel-number">04</div>
+                <h3>Ambassadeurs internes</h3>
+                <div class="duration">6 mois de suivi</div>
+                <p class="description">2 personnes de votre équipe formées pour piloter les rituels après mon départ. La culture continue sans moi.</p>
+                <p class="impact">Culture qui dure</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phases -->
+    <section id="phases" style="background: var(--white); padding: 5rem 5%; margin: 0;">
+        <div style="max-width: 1400px; margin: 0 auto;">
+            <h2>Du diagnostic à la culture ancrée.</h2>
+            <p class="section-subtitle"></p>
+
+            <div class="timeline fade-in">
+                <div class="timeline-item">
+                    <h3>Phase 0 — Diagnostic</h3>
+                    <div class="phase-duration">⏱ 1 semaine avant</div>
+                    <p>Co-construction avec Direction/DRH, identification des 2 ambassadeurs internes qui porteront le projet.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Phase 1-2-3 — Rituels quotidiens</h3>
+                    <div class="phase-duration">⏱ 3 semaines</div>
+                    <p>Formation 1h/jour, installation des 4 rituels dans votre quotidien, mesure Jour 1 et Jour 21. Vous expérimentez la transformation en direct.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Phase 4 — Consolidation</h3>
+                    <div class="phase-duration">⏱ 6 mois inclus</div>
+                    <p>Check-in mensuel avec vos ambassadeurs, ajustements terrain, rapport final avec données avant/après. La culture s'ancre et devient la norme.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI -->
+    <section id="roi">
+        <h2>Votre 800€ ne coûte rien face à ce que vous perdez.</h2>
+        <p class="section-subtitle">Réduction d'absentéisme de 20% — cibles réalistes basées sur données SD Worx</p>
+
+        <div class="roi-table fade-in">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Taille entreprise</th>
+                        <th>Économies potentielles/an</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>30 employés</td>
+                        <td class="highlight">9 600€</td>
+                    </tr>
+                    <tr>
+                        <td>50 employés</td>
+                        <td class="highlight">16 000€</td>
+                    </tr>
+                    <tr>
+                        <td>100 employés</td>
+                        <td class="highlight">32 000€</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="roi-note">Cibles réalistes, données SD Worx. Pas de promesses.</p>
+    </section>
+
+    <!-- Garantie -->
+    <section style="background: var(--cream);">
+        <div class="garantie-block fade-in">
+            <h3>Garantie Jour 3 — Risque = zéro.</h3>
+            <p>Si ça ne colle pas après 3 jours : résiliation, 50% remboursé, vous gardez tout.</p>
+        </div>
+    </section>
+
+    <!-- Pourquoi Prix Pilote -->
+    <section id="pourquoi-pilote">
+        <h2>Pourquoi un prix pilote ?</h2>
+        <p class="section-subtitle">Ce n'est pas le prix final. Je cherche 3 entreprises prêtes à tester avec moi et à me donner des données réelles en retour. Vous payez moins, vous prenez zéro risque, vous êtes les premières à bénéficier. On gagne tous les deux.</p>
+    </section>
+
+    <!-- Pricing -->
+    <div class="pricing-section" id="pricing">
+        <div class="pricing-container">
+            <div class="pricing-card fade-in">
+                <div class="pricing-badge">⏳ 3 places uniquement</div>
+                <div class="price">800€</div>
+                <div class="price-label">Programme complet — Pilote mars 2026</div>
+
+                <ul>
+                    <li>Diagnostic co-construit avec votre direction</li>
+                    <li>3 semaines d'accompagnement quotidien (1h/jour)</li>
+                    <li>2 ambassadeurs internes formés</li>
+                    <li>Outils et supports inclus</li>
+                    <li>6 mois de suivi consolidation</li>
+                    <li>Garantie Jour 3 : sortie possible, 50% remboursé</li>
+                    <li>Données avant/après transparentes</li>
+                </ul>
+
+                <a href="mailto:hello@marjoriemathieu.be?subject=Réservation%20place%20pilote%20Équilibre%20Performance" class="btn-primary">Je réserve ma place →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- About -->
+    <div class="about-section">
+        <div class="about-content fade-in">
+            <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/dbcef024-d04b-4b01-a336-3e293ca7d0f5" alt="Marjorie Mathieu" class="about-logo">
+            <div class="about-text">
+                <h2>Marjorie Mathieu</h2>
+                <p class="quote">15 ans corporate belge. 10 ans pratique collective. Je ne vous vends pas du bien-être — je transforme votre culture opérationnelle.</p>
+                <div class="tags">
+                    <span class="tag">15 ans corporate</span>
+                    <span class="tag">10 ans pratique</span>
+                    <span class="tag">Radio Taiso</span>
+                    <span class="tag">Belgique</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <strong>Marjorie Mathieu</strong> — Consultante en culture d'entreprise<br>
+                <a href="mailto:hello@marjoriemathieu.be">hello@marjoriemathieu.be</a> | 
+                <a href="tel:+32477091803">0477 09 18 03</a> | 
+                Ath, Hainaut — Belgique
+            </div>
+            <div class="footer-copyright">
+                © 2026 Marjorie Mathieu — Équilibre Performance
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const navHeight = 70;
+                    const targetPosition = target.offsetTop - navHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+</html>
