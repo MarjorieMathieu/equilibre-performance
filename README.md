@@ -1,6 +1,3 @@
-# equilibre-performance
-Landing page Équilibre Performance
-<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
