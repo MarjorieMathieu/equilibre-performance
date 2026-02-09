@@ -182,8 +182,9 @@ footer a:hover { color: var(--white); }
     </svg>
     <span class="logo-text">Marjorie Mathieu</span>
   </a>
-  <a href="mailto:hello@marjoriemathieu.be?subject=Pilote%20Mars%202026" class="nav-cta">Je teste — 800€ →</a>
+  <a href="https://calendly.com/equilibre_performance/equilibreperformance" target="_blank" class="nav-cta">Diagnostic Gratuit — 15 min →</a>
 </nav>
+
 <section class="hero">
   <div class="hero-grid">
     <div>
@@ -191,7 +192,7 @@ footer a:hover { color: var(--white); }
       <h1>Arrêtez de perdre vos talents.<br>Construisez <strong>une culture qui les garde.</strong></h1>
       <p class="hero-sub">En 3 semaines, j'intègre des rituels collectifs dans votre quotidien qui boostent l'engagement, la productivité et la rétention. Concret. Mesurable. Qui tient.</p>
       <div class="hero-actions">
-        <a href="mailto:hello@marjoriemathieu.be?subject=Pilote%20Mars%202026%20%E2%80%94%20Je%20r%C3%A9serve%20ma%20place&body=Bonjour%20Marjorie%2C%0A%0AJe%20souhaite%20r%C3%A9server%20une%20place%20pour%20le%20pilote%20mars%202026.%0A%0ANom%20entreprise%20%3A%0ANombre%20employ%C3%A9s%20%3A%0AVotre%20fonction%20%3A%0A%0AMerci" class="btn-hero">Je réserve ma place →</a>
+        <a href="https://calendly.com/equilibre_performance/equilibreperformance" target="_blank" class="btn-hero">Réserver mon diagnostic (15 min) →</a>
         <a href="#methode" class="btn-ghost">Comment ça marche ↓</a>
       </div>
     </div>
@@ -202,11 +203,13 @@ footer a:hover { color: var(--white); }
     </div>
   </div>
 </section>
+
 <div class="belgium">
   <div class="bel-item"><div class="bel-num">40%</div><div class="bel-label">des professionnels belges à risque d'épuisement</div><div class="bel-source">AG Insurance 2024</div></div>
   <div class="bel-item"><div class="bel-num">+44%</div><div class="bel-label">d'arrêts longue durée en 5 ans</div><div class="bel-source">INAMI / VRT News 2025</div></div>
   <div class="bel-item"><div class="bel-num">2 Mds €</div><div class="bel-label">versés par l'assurance indemnités en 2023</div><div class="bel-source">INAMI / RTL Belgique 2025</div></div>
 </div>
+
 <section class="rituels reveal" id="methode">
   <div class="section-inner">
     <div class="section-head"><span class="section-label">La méthode</span><h2 class="title">4 rituels. <em>Dans</em> votre workflow.<br>Pas à côté.</h2><p>Chaque rituel s'intègre naturellement dans votre journée — sans déranger la productivité. Au contraire, elle monte.</p></div>
@@ -218,6 +221,7 @@ footer a:hover { color: var(--white); }
     </div>
   </div>
 </section>
+
 <section class="phases reveal">
   <div class="section-head"><span class="section-label">Comment ça marche</span><h2 class="title">Du diagnostic à <em>la culture ancrée.</em></h2></div>
   <div class="phases-inner">
@@ -228,6 +232,7 @@ footer a:hover { color: var(--white); }
     </div>
   </div>
 </section>
+
 <section class="roi reveal">
   <div class="section-inner">
     <div class="section-head"><span class="section-label">Retour sur investissement</span><h2 class="title">Votre 800€ ne coûte rien face à<br><em>ce que vous perdez aujourd'hui.</em></h2><p>Objectif réaliste : réduire l'absentéisme de 20% sur 6 mois.</p></div>
@@ -239,12 +244,15 @@ footer a:hover { color: var(--white); }
     <p class="roi-note">Cibles réalistes basées sur une réduction de 20% de l'absentéisme — données SD Worx 2024–2025. Pas de promesses. Des mesures transparentes.</p>
   </div>
 </section>
+
 <div class="garantie-wrap reveal">
   <div class="garantie"><div class="garantie-shield">🛡️</div><div class="garantie-content"><h3>Garantie Jour 3 — Risque = zéro.</h3><p>Si la méthode ne vous convient pas après 3 jours, vous résiliez. 50% remboursé. Vous gardez tous les outils, templates et formations reçues. C'est ma façon de vous dire : je crois vraiment dans ce que je vous propose.</p></div></div>
 </div>
+
 <div class="pilote-why reveal">
   <div class="pilote-why-inner"><h3>Pourquoi un prix pilote ?</h3><p>Ce n'est pas le prix final d'Équilibre Performance. Je cherche 3 entreprises prêtes à tester la méthode avec moi — et à me donner des données réelles et un feedback honnête en retour. En échange : vous payez moins, vous prenez zéro risque, et vous êtes les premières à bénéficier d'une culture qui retient vraiment. On gagne tous les deux.</p></div>
 </div>
+
 <section class="pricing reveal" id="pricing">
   <div class="pricing-inner">
     <div class="section-head"><span class="section-label">Pilote mars 2026</span><h2 class="title">Prêt à commencer ?</h2></div>
@@ -260,12 +268,13 @@ footer a:hover { color: var(--white); }
         <li>6 mois de suivi post-implémentation</li>
         <li>Garantie Jour 3 — sortie avec 50% remboursé</li>
       </ul>
-      <a href="mailto:hello@marjoriemathieu.be?subject=Pilote%20Mars%202026%20%E2%80%94%20Je%20r%C3%A9serve%20ma%20place&body=Bonjour%20Marjorie%2C%0A%0AJe%20souhaite%20r%C3%A9server%20une%20place%20pour%20le%20pilote%20mars%202026.%0A%0ANom%20de%20l'entreprise%20%3A%20%0ANombre%20d'employ%C3%A9s%20%3A%20%0AVotre%20fonction%20%3A%20%0A%0AMerci" class="btn-pricing">Je réserve ma place →</a>
+      <a href="https://calendly.com/equilibre_performance/equilibreperformance" target="_blank" class="btn-pricing">Postuler pour le pilote →</a>
       <div class="pricing-places">⏳ Places restantes : 3 / 3</div>
       <div class="pricing-contact">Ou contactez-moi directement → <a href="mailto:hello@marjoriemathieu.be">hello@marjoriemathieu.be</a></div>
     </div>
   </div>
 </section>
+
 <section class="about reveal">
   <div class="about-inner">
     <div class="about-logo-wrap">
@@ -285,11 +294,13 @@ footer a:hover { color: var(--white); }
     </div>
   </div>
 </section>
+
 <footer>
   <strong>Marjorie Mathieu</strong><br>Consultante en culture d'entreprise<br>
   <a href="mailto:hello@marjoriemathieu.be">hello@marjoriemathieu.be</a> | <a href="tel:+32477091803">0477 09 18 03</a> | Ath, Hainaut — Belgique<br><br>
   © 2026 Marjorie Mathieu — Équilibre Performance
 </footer>
+
 <script>
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 50); });
