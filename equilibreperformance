@@ -69,7 +69,7 @@
 
         /* HERO - CORRECTION DE L'ESPACEMENT HAUT */
         .hero { 
-            padding-top: 160px; /* Espace pour ne pas être caché par le header */
+            padding-top: 180px; /* Augmenté de 160px à 180px pour laisser de la place au titre */
             padding-bottom: 6rem;
             padding-left: 6%;
             padding-right: 6%;
@@ -86,6 +86,20 @@
             text-align: center;
             box-shadow: 0 20px 50px rgba(0,0,0,0.05);
             position: relative;
+        }
+
+        /* NOUVEAU STYLE POUR LE SURTITRE */
+        .hero-brand {
+            display: inline-block;
+            font-family: var(--body);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(0, 82, 136, 0.2);
+            padding-bottom: 5px;
         }
 
         h1 { font-family: var(--display); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 500; color: var(--dark-grid); line-height: 1.1; margin-bottom: 1.5rem; }
@@ -135,7 +149,7 @@
 
         @media (max-width: 850px) {
             .grid-3 { grid-template-columns: 1fr; }
-            .hero { padding-top: 120px; }
+            .hero { padding-top: 140px; } /* Ajustement mobile */
             .hero-card { padding: 3rem 1.5rem; }
             .logo-text { display: none; }
             .section-title { font-size: 2.2rem; }
@@ -160,6 +174,8 @@
 
 <section class="hero">
     <div class="hero-card">
+        <div class="hero-brand">ÉQUILIBRE PERFORMANCE</div>
+        
         <h1>Arrêtez de perdre vos talents.<br>Construisez <strong>une culture qui les garde.</strong></h1>
         <p class="hero-sub">Les entreprises avec une culture forte retiennent 3x plus de talents. En 3 semaines, j'installe des rituels concrets qui transforment votre productivité.</p>
         <a href="https://calendly.com/equilibre_performance/equilibreperformance" target="_blank" class="btn-main">Réserver mon diagnostic (15 min) →</a>
