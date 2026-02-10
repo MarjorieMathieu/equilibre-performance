@@ -204,55 +204,6 @@ footer a:hover { color: var(--white); }
   </div>
 </section>
 
-<div class="belgium">
-  <div class="bel-item"><div class="bel-num">40%</div><div class="bel-label">des professionnels belges à risque d'épuisement</div><div class="bel-source">AG Insurance 2024</div></div>
-  <div class="bel-item"><div class="bel-num">+44%</div><div class="bel-label">d'arrêts longue durée en 5 ans</div><div class="bel-source">INAMI / VRT News 2025</div></div>
-  <div class="bel-item"><div class="bel-num">2 Mds €</div><div class="bel-label">versés par l'assurance indemnités en 2023</div><div class="bel-source">INAMI / RTL Belgique 2025</div></div>
-</div>
-
-<section class="rituels reveal" id="methode">
-  <div class="section-inner">
-    <div class="section-head"><span class="section-label">La méthode</span><h2 class="title">4 rituels. <em>Dans</em> votre workflow.<br>Pas à côté.</h2><p>Chaque rituel s'intègre naturellement dans votre journée — sans déranger la productivité. Au contraire, elle monte.</p></div>
-    <div class="rituels-grid">
-      <div class="ritual-card"><span class="ritual-num">01</span><div class="ritual-meta">10 min · Chaque matin</div><h3>Radio Taiso</h3><p>Exercices collectifs pratiqués depuis 70 ans chez Toyota. 27 millions de Japonais font ça au quotidien. Zéro entreprise belge ne l'utilise encore — c'est votre avantage.</p><div class="ritual-impact">→ Cohésion équipe dès J1</div></div>
-      <div class="ritual-card"><span class="ritual-num">02</span><div class="ritual-meta">5–10 min · 2× par jour</div><h3>Pauses dynamiques</h3><p>Après 90 min de concentration, le cerveau demande une pause. Étirements + respiration guidée, intégré dans le calendrier. Pas optionnel — parce que ça marche.</p><div class="ritual-impact">→ Concentration améliorée</div></div>
-      <div class="ritual-card"><span class="ritual-num">03</span><div class="ritual-meta">4h de formation</div><h3>Time Blocking</h3><p>Structurer la journée en blocs focalisés. Formé en 4h, intégré dans les outils que vous utilisez déjà. Simple, efficace, transformateur.</p><div class="ritual-impact">→ +2–3h productivité/jour</div></div>
-      <div class="ritual-card"><span class="ritual-num">04</span><div class="ritual-meta">Suivi sur 6 mois</div><h3>Ambassadeurs internes</h3><p>2 personnes de votre équipe formées pour piloter les rituels après mon départ. Le changement reste — même quand le consultant s'en va. C'est le secret.</p><div class="ritual-impact">→ Culture qui dure</div></div>
-    </div>
-  </div>
-</section>
-
-<section class="phases reveal">
-  <div class="section-head"><span class="section-label">Comment ça marche</span><h2 class="title">Du diagnostic à <em>la culture ancrée.</em></h2></div>
-  <div class="phases-inner">
-    <div class="timeline">
-      <div class="timeline-item"><span class="timeline-dot dot-navy"></span><div class="timeline-box"><div class="timeline-tag">Phase 0</div><h3>Diagnostic & co-construction</h3><p>Audit de votre culture actuelle avec Direction/DRH. On identifie les points forts, les freins, et les 2 ambassadeurs qui vont piloter le changement.</p><span class="timeline-duration">⏱ 1 semaine avant le démarrage</span></div></div>
-      <div class="timeline-item"><span class="timeline-dot dot-coral"></span><div class="timeline-box"><div class="timeline-tag">Phases 1-2-3</div><h3>Implémentation intensive</h3><p>Formation quotidienne d'1h/jour. Les rituels sont mis en place chaque matin. On mesure l'engagement à J1 et J21 — pas de promesses, des données réelles.</p><span class="timeline-duration">⏱ 3 semaines, lundi–vendredi</span></div></div>
-      <div class="timeline-item"><span class="timeline-dot dot-green"></span><div class="timeline-box"><div class="timeline-tag">Phase 4</div><h3>Consolidation culture</h3><p>Check-in mensuel avec vos ambassadeurs. Ajustements selon le feedback de l'équipe. Rapport final complet avec données, impact, recommandations.</p><span class="timeline-duration">⏱ 6 mois inclus</span></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="roi reveal">
-  <div class="section-inner">
-    <div class="section-head"><span class="section-label">Retour sur investissement</span><h2 class="title">Votre 800€ ne coûte rien face à<br><em>ce que vous perdez aujourd'hui.</em></h2><p>Objectif réaliste : réduire l'absentéisme de 20% sur 6 mois.</p></div>
-    <div class="roi-grid">
-      <div class="roi-card"><div class="roi-size">30 employés</div><div class="roi-saving">9 600 €</div><div class="roi-label">économies annuelles</div></div>
-      <div class="roi-card"><div class="roi-size">50 employés</div><div class="roi-saving">16 000 €</div><div class="roi-label">économies annuelles</div></div>
-      <div class="roi-card"><div class="roi-size">100 employés</div><div class="roi-saving">32 000 €</div><div class="roi-label">économies annuelles</div></div>
-    </div>
-    <p class="roi-note">Cibles réalistes basées sur une réduction de 20% de l'absentéisme — données SD Worx 2024–2025. Pas de promesses. Des mesures transparentes.</p>
-  </div>
-</section>
-
-<div class="garantie-wrap reveal">
-  <div class="garantie"><div class="garantie-shield">🛡️</div><div class="garantie-content"><h3>Garantie Jour 3 — Risque = zéro.</h3><p>Si la méthode ne vous convient pas après 3 jours, vous résiliez. 50% remboursé. Vous gardez tous les outils, templates et formations reçues. C'est ma façon de vous dire : je crois vraiment dans ce que je vous propose.</p></div></div>
-</div>
-
-<div class="pilote-why reveal">
-  <div class="pilote-why-inner"><h3>Pourquoi un prix pilote ?</h3><p>Ce n'est pas le prix final d'Équilibre Performance. Je cherche 3 entreprises prêtes à tester la méthode avec moi — et à me donner des données réelles et un feedback honnête en retour. En échange : vous payez moins, vous prenez zéro risque, et vous êtes les premières à bénéficier d'une culture qui retient vraiment. On gagne tous les deux.</p></div>
-</div>
-
 <section class="pricing reveal" id="pricing">
   <div class="pricing-inner">
     <div class="section-head"><span class="section-label">Pilote mars 2026</span><h2 class="title">Prêt à commencer ?</h2></div>
@@ -275,39 +226,5 @@ footer a:hover { color: var(--white); }
   </div>
 </section>
 
-<section class="about reveal">
-  <div class="about-inner">
-    <div class="about-logo-wrap">
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="48" fill="#1B365D"/>
-        <text x="50" y="65" font-family="Cormorant Garamond, serif" font-size="52" font-weight="500" fill="#b8b0a4" text-anchor="middle">M</text>
-        <circle cx="72" cy="28" r="3" fill="#e07a5f" opacity="0.8"/>
-        <circle cx="78" cy="32" r="2.5" fill="#e07a5f" opacity="0.6"/>
-        <circle cx="75" cy="38" r="2" fill="#e07a5f" opacity="0.5"/>
-      </svg>
-    </div>
-    <div class="about-content">
-      <span class="section-label">À propos</span><h3>Marjorie Mathieu</h3><div class="about-subtitle">Consultante en culture d'entreprise</div>
-      <p>15 ans dans des environnements corporatifs belges. 10 ans de pratique et d'enseignement en bien-être collectif. Une méthode qui ne s'arrête pas à un séminaire — elle s'ancre dans votre quotidien.</p>
-      <p>Je ne vous vends pas du bien-être. Je transforme votre culture opérationnelle.</p>
-      <div class="about-tags"><span>15 ans expérience corporate</span><span>10 ans pratique collective</span><span>Radio Taiso certifiée</span><span>Belgique</span></div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <strong>Marjorie Mathieu</strong><br>Consultante en culture d'entreprise<br>
-  <a href="mailto:hello@marjoriemathieu.be">hello@marjoriemathieu.be</a> | <a href="tel:+32477091803">0477 09 18 03</a> | Ath, Hainaut — Belgique<br><br>
-  © 2026 Marjorie Mathieu — Équilibre Performance
-</footer>
-
-<script>
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 50); });
-const reveals = document.querySelectorAll('.reveal');
-const revealOnScroll = () => { reveals.forEach(el => { if (el.getBoundingClientRect().top < window.innerHeight * 0.85) el.classList.add('active'); }); };
-window.addEventListener('scroll', revealOnScroll);
-window.addEventListener('load', revealOnScroll);
-</script>
 </body>
 </html>
