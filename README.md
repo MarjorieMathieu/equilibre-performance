@@ -1013,7 +1013,7 @@
         <div class="hero-left">
             <div class="hero-tag reveal">
                 <span class="dot"></span>
-                Pilote Mars 2026 — 3 places
+                Pilote 2026 — 3 places
             </div>
             <h1 class="reveal reveal-delay-1">Vos talents partent.<br>Construisez <strong>une culture qui les garde.</strong></h1>
             <p class="hero-desc reveal reveal-delay-2">En 3 semaines, j'installe des rituels concrets dans vos workflows quotidiens. Pas du bien-être cosmétique — de la culture opérationnelle qui transforme votre productivité.</p>
