@@ -1108,7 +1108,7 @@
                 <div class="pillar-icon">🚀</div>
                 <h3>Ambassadeurs internes</h3>
                 <div class="pillar-timing">6 mois · suivi inclus</div>
-                <p>Je forme 2 relais internes dans votre équipe. Ce sont eux qui font vivre la culture au quotidien, bien après mon départ. Pas de dépendance externe.</p>
+                <p>Je forme des relais internes dans votre équipe. Ce sont eux qui font vivre la culture au quotidien, bien après mon départ. Pas de dépendance externe.</p>
             </div>
         </div>
     </div>
@@ -1126,7 +1126,7 @@
             <div class="timeline-content">
                 <h4>Diagnostic & co-construction</h4>
                 <div class="timeline-duration">1 semaine avant démarrage</div>
-                <p>Concertation avec Direction, DRH, Responsable Prévention. Audit de la culture actuelle et identification de 2 ambassadeurs internes.</p>
+                <p>Concertation avec Direction, DRH, Responsable Prévention. Audit de la culture actuelle et identification des ambassadeurs internes.</p>
             </div>
         </div>
         <div class="timeline-item reveal reveal-delay-1">
@@ -1204,7 +1204,7 @@
                     <tr>
                         <td>Ancrage</td>
                         <td>Consultant externe qui part</td>
-                        <td>2 ambassadeurs internes formés</td>
+                        <td>ambassadeurs internes formés</td>
                     </tr>
                     <tr>
                         <td>ROI visible</td>
@@ -1233,7 +1233,7 @@
         <div class="pricing-card">
             <div class="pricing-badge">
                 <span class="dot" style="width:5px;height:5px;background:var(--coral-light);border-radius:50%;animation:pulse-dot 2s ease infinite;"></span>
-                Offre Pilote · Mars 2026 · 3 places
+                Offre Pilote · 2026 · 3 places
             </div>
             <div class="pricing-price">800€ <small>HTVA</small></div>
             <p class="pricing-desc">3 semaines d'implémentation intensive + 6 mois de suivi complet.<br>Tout inclus, aucun frais caché.</p>
