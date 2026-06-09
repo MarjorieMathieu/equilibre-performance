@@ -1,9 +1,8 @@
-<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Équilibre Performance — Pilote 2026</title>
+    <title>Momentum 180 — Pilote 2026</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
@@ -89,7 +88,7 @@
             position:absolute; right:4%; top:50%;
             transform:translateY(-50%);
             font-family: var(--serif);
-            font-size: clamp(200px,24vw,360px);
+            font-size: clamp(160px,20vw,280px);
             font-weight:700; font-style:italic;
             color: rgba(27,54,93,0.03);
             line-height:1; pointer-events:none; user-select:none;
@@ -165,7 +164,6 @@
             opacity:0; animation: up 1s ease 0.95s forwards;
         }
         .spot { width:9px; height:9px; border-radius:50%; }
-        .spot.gone { background:rgba(27,54,93,0.12); border:1px solid rgba(27,54,93,0.2); }
         .spot.open  { background:var(--coral); }
         .spots-txt { font-size:0.75rem; color:#3d4f6b; margin-left:0.3rem; }
         .spots-txt strong { color:var(--coral); }
@@ -181,6 +179,29 @@
             animation: pulse 2s ease infinite;
         }
         @keyframes pulse { 0%,100%{width:30px;opacity:.4} 50%{width:50px;opacity:.9} }
+
+        /* ── URGENCE (cotisation solidarité) ── */
+        .urgency-band {
+            background: var(--coral);
+            padding: 2rem 6%;
+            text-align: center;
+        }
+        .urgency-inner {
+            max-width: 800px; margin: 0 auto;
+        }
+        .urgency-title {
+            font-family: var(--serif);
+            font-size: 1.1rem; font-weight: 700;
+            color: #fff; margin-bottom: 0.5rem;
+        }
+        .urgency-text {
+            font-size: 0.88rem; color: rgba(255,255,255,0.9);
+            line-height: 1.7;
+        }
+        .urgency-src {
+            font-size: 0.68rem; color: rgba(255,255,255,0.6);
+            margin-top: 0.5rem;
+        }
 
         /* ── CHIFFRES (dark band) ────────────── */
         .stats-band {
@@ -210,7 +231,7 @@
             margin-top:0.8rem; line-height:1.7;
         }
         .stats-grid {
-            display:grid; grid-template-columns:repeat(3,1fr); gap:1rem;
+            display:grid; grid-template-columns:repeat(2,1fr); gap:1rem;
         }
         .stat-box {
             background:rgba(255,255,255,0.04);
@@ -227,6 +248,26 @@
         }
         .stat-label { font-size:0.8rem; color:rgba(255,255,255,0.6); line-height:1.5; }
         .stat-src   { font-size:0.65rem; color:rgba(255,255,255,0.25); margin-top:0.4rem; }
+
+        /* ── GARANTIE (haute position) ───────── */
+        .guarantee-band {
+            padding: 3rem 6%;
+            text-align: center;
+            background: rgba(27,54,93,0.03);
+            border-top: 1px solid rgba(27,54,93,0.06);
+            border-bottom: 1px solid rgba(27,54,93,0.06);
+        }
+        .guarantee-band-inner {
+            max-width: 600px; margin: 0 auto;
+        }
+        .guarantee-band-title {
+            font-family: var(--serif);
+            font-size: 1.3rem; font-weight: 700;
+            color: var(--navy); margin-bottom: 0.6rem;
+        }
+        .guarantee-band-text {
+            font-size: 0.92rem; color: #3d4f6b; line-height: 1.7;
+        }
 
         /* ── PROBLÈME (narrative) ────────────── */
         .problem {
@@ -628,7 +669,6 @@
             display:flex; justify-content:center; gap:0.5rem; margin-bottom:0.6rem;
         }
         .f-spot { width:10px; height:10px; border-radius:50%; }
-        .f-spot.gone { background:rgba(27,54,93,0.12); border:1px solid rgba(27,54,93,0.2); }
         .f-spot.open { background:var(--coral); }
         .finale-spots-txt { font-size:0.75rem; color:#3d4f6b; margin-bottom:2rem; }
         .finale-spots-txt strong { color:var(--coral); }
@@ -697,24 +737,24 @@
 
 <!-- ═══ NAV ═══════════════════════════════════════ -->
 <nav id="nav">
-    <div class="nav-logo">Équilibre Performance</div>
+    <div class="nav-logo">Momentum 180</div>
     <a href="https://calendly.com/equilibre_performance/equilibreperformance" target="_blank" class="nav-cta">Diagnostic gratuit →</a>
 </nav>
 
 <!-- ═══ HERO ══════════════════════════════════════ -->
 <section class="hero">
-    <div class="hero-ornament">EP</div>
+    <div class="hero-ornament">180</div>
     <div class="hero-inner">
 
         <div class="eyebrow">
             <div class="eyebrow-line"></div>
-            <div class="eyebrow-text">Programme pilote · PME 50–200 collaborateurs · Hainaut & Wallonie</div>
+            <div class="eyebrow-text">Programme pilote · Organisations 50–200 collaborateurs · Hainaut & Wallonie</div>
         </div>
 
         <h1>
-            4 rituels opérationnels.<br>
-            <em>Intégrés dans vos workflows.</em>
-            <span class="aside">Pour DRH et dirigeants de PME 50–200 personnes qui veulent une culture d'entreprise qui tient — pas un séminaire qu'on oublie en 6 semaines.</span>
+            4 routines opérationnelles.<br>
+            <em>Intégrées dans vos workflows.</em>
+            <span class="aside">Pour DRH et dirigeants d'organisations 50–200 collaborateurs qui veulent une culture opérationnelle qui tient — pas un séminaire qu'on oublie en 6 semaines.</span>
         </h1>
 
         <p class="hero-quote">
@@ -722,25 +762,24 @@
         </p>
 
         <p class="hero-body">
-            En 3 semaines sur site, j'installe 4 rituels opérationnels directement dans vos agendas et workflows existants. Je forme 2 ambassadeurs internes qui pilotent le système <strong>6 mois après mon départ.</strong> Zéro dépendance consultante. Des données avant/après transparentes.
+            En 4 semaines sur site, j'installe 4 routines opérationnelles directement dans vos agendas et workflows existants. Je forme des ambassadeurs internes qui pilotent le système <strong>6 mois après mon départ.</strong> Zéro dépendance consultante. Des données avant/après transparentes.
         </p>
 
         <div class="hero-actions">
             <a href="https://calendly.com/equilibre_performance/equilibreperformance" target="_blank" class="btn-cta">
-                Réserver un diagnostic gratuit
+                Réserver un diagnostic — 15 minutes
                 <span class="btn-arrow">→</span>
             </a>
             <div class="cta-meta">
-                <strong>15 minutes · Zéro engagement</strong>
-                Je vous dis si votre entreprise correspond au profil — ou pas.
+                <strong>Zéro engagement</strong>
+                Je vous dis si votre organisation correspond au profil — ou pas.
             </div>
         </div>
 
         <div class="spots-row">
-            <div class="spot gone"></div>
             <div class="spot open"></div>
             <div class="spot open"></div>
-            <span class="spots-txt">Pilote 2026 — <strong>2 places restantes</strong> sur 3</span>
+            <span class="spots-txt">Pilote 2026 — <strong>2 places partenaires</strong></span>
         </div>
     </div>
 
@@ -750,30 +789,52 @@
     </div>
 </section>
 
+<!-- ═══ URGENCE — COTISATION SOLIDARITÉ ═══════════ -->
+<section class="urgency-band">
+    <div class="urgency-inner">
+        <div class="urgency-title">Depuis janvier 2026 : chaque arrêt long coûte encore plus cher</div>
+        <div class="urgency-text">Nouvelle cotisation de solidarité : les employeurs de 50+ travailleurs paient désormais 30% des indemnités maladie des 2e et 3e mois d'incapacité. Le coût d'un arrêt longue durée ne se limite plus au salaire garanti.</div>
+        <div class="urgency-src">Loi fédérale 1er janvier 2026 · SD Worx · Le Soir · RTL Info</div>
+    </div>
+</section>
+
 <!-- ═══ CHIFFRES ══════════════════════════════════ -->
 <section class="stats-band">
     <div class="stats-band-inner">
         <div class="stats-intro reveal">
-            <h2>Ce que coûte le désengagement <em>dans votre bilan.</em></h2>
-            <p>Ces chiffres concernent des entreprises belges ordinaires. Peut-être la vôtre.</p>
+            <h2>Ce que coûtent les absences longue durée <em>dans votre bilan.</em></h2>
+            <p>Ces chiffres concernent des organisations belges ordinaires. Peut-être la vôtre.</p>
         </div>
         <div class="stats-grid">
             <div class="stat-box reveal d1">
-                <div class="stat-num">1 580€</div>
-                <div class="stat-label">Coût de l'absentéisme par employé par an</div>
-                <div class="stat-src">SD Worx 2024</div>
+                <div class="stat-num">165 425€</div>
+                <div class="stat-label">Coût de l'absentéisme pour 100 ETP en Hainaut</div>
+                <div class="stat-src">SD Worx 2025</div>
             </div>
             <div class="stat-box reveal d2">
+                <div class="stat-num">+94%</div>
+                <div class="stat-label">De burn-out en 6 ans en Belgique</div>
+                <div class="stat-src">Mutualités Libres 2024</div>
+            </div>
+            <div class="stat-box reveal d3">
                 <div class="stat-num">+44%</div>
-                <div class="stat-label">D'arrêts longue durée en 5 ans en Belgique (troubles psychiques)</div>
+                <div class="stat-label">D'arrêts longue durée en 5 ans (troubles psychiques)</div>
                 <div class="stat-src">INAMI / VRT News 2025</div>
             </div>
             <div class="stat-box reveal d3">
                 <div class="stat-num">40%</div>
-                <div class="stat-label">Des travailleurs belges concernés par le risque burn-out</div>
+                <div class="stat-label">Des travailleurs belges concernés par le risque de burn-out</div>
                 <div class="stat-src">AG Insurance 2024</div>
             </div>
         </div>
+    </div>
+</section>
+
+<!-- ═══ GARANTIE JOUR 3 (position haute) ═════════ -->
+<section class="guarantee-band">
+    <div class="guarantee-band-inner reveal">
+        <div class="guarantee-band-title">Garantie Jour 3 — c'est nous qui prenons le risque</div>
+        <div class="guarantee-band-text">Après 3 jours, si ça ne colle pas : 50% remboursé. Vous gardez tous les outils et formations. Sans discussion.</div>
     </div>
 </section>
 
@@ -785,15 +846,15 @@
                 <div class="section-label-line"></div>
                 <div class="section-label-text">Impact financier</div>
             </div>
-            <h2>800€ investis.<br><em>ROI concret en 6 mois.</em></h2>
+            <h2>1 500€ investis.<br><em>ROI concret en 6 mois.</em></h2>
             <p class="roi-sub">Calcul basé sur une cible de réduction de 20% de l'absentéisme — objectif réaliste sur 6 mois, pas une promesse.</p>
         </div>
 
         <div class="roi-calc reveal d1">
-            <div class="roi-calc-tag">Pour une entreprise de 50 collaborateurs · 1 580€/employé/an · Source SD Worx 2024</div>
+            <div class="roi-calc-tag">Pour une organisation de 50 collaborateurs en Hainaut · 165 425€/100 ETP · Source SD Worx 2025</div>
             <div class="roi-equation">
                 <div class="roi-eq-block">
-                    <div class="roi-eq-num">80 000€</div>
+                    <div class="roi-eq-num">82 700€</div>
                     <div class="roi-eq-label">Coût absentéisme actuel/an</div>
                 </div>
                 <div class="roi-eq-op">×</div>
@@ -803,18 +864,18 @@
                 </div>
                 <div class="roi-eq-op">=</div>
                 <div class="roi-eq-block result">
-                    <div class="roi-eq-num">16 000€</div>
+                    <div class="roi-eq-num">16 500€</div>
                     <div class="roi-eq-label">Économies potentielles/an</div>
                 </div>
             </div>
-            <div class="roi-footnote">Investissement pilote : 800€ HTVA — soit un retour potentiel ×20. Ce sont des cibles transparentes, pas des garanties contractuelles.</div>
+            <div class="roi-footnote">Investissement pilote : 1 500€ HTVA — soit un retour potentiel ×10. Ce sont des cibles transparentes, pas des garanties contractuelles.</div>
         </div>
 
         <div class="roi-extras reveal d2">
             <div class="roi-extra">
-                <div class="roi-extra-num">+39%</div>
-                <div class="roi-extra-text">De productivité pour les équipes engagées vs désengagées</div>
-                <div class="roi-extra-src">Securex / Graydon 2024</div>
+                <div class="roi-extra-num">1 580€</div>
+                <div class="roi-extra-text">Coût direct de l'absentéisme par collaborateur par an</div>
+                <div class="roi-extra-src">SD Worx 2024</div>
             </div>
             <div class="roi-extra">
                 <div class="roi-extra-num">+4–5h</div>
@@ -823,7 +884,7 @@
             </div>
             <div class="roi-extra">
                 <div class="roi-extra-num">+15–18%</div>
-                <div class="roi-extra-text">De concentration mesurée avec les pauses intelligentes 90 min</div>
+                <div class="roi-extra-text">De concentration mesurée avec les pauses de récupération cognitive (cycles 90 min)</div>
                 <div class="roi-extra-src">INRS · Recherche cycles ultradiens (Kleitman)</div>
             </div>
         </div>
@@ -838,13 +899,13 @@
             <div class="section-label-text">Ce que votre budget formation finance sans le savoir</div>
         </div>
         <h2 class="reveal d1">
-            On installe un babyfoot<br>et on s'étonne que les gens <em>démissionnent encore.</em>
+            On installe un babyfoot<br>et on s'étonne que les arrêts longs <em>continuent d'exploser.</em>
         </h2>
         <p class="problem-story reveal d1">
-            4 000€ de team building en septembre. Deux mois plus tard, l'ambiance était exactement la même. Ce n'est pas un cas isolé — c'est le modèle standard de ce que les entreprises belges appellent encore "investir dans leur culture".
+            4 000€ de team building en septembre. Deux mois plus tard, l'ambiance était exactement la même. Ce n'est pas un cas isolé — c'est le modèle standard de ce que les organisations belges appellent encore "investir dans leur culture".
         </p>
         <p class="problem-body reveal d2">
-            Les approches classiques partagent un point commun : elles se déroulent <strong>en dehors du travail réel.</strong> Un jour de séminaire ne change pas une habitude. Une conférence sur le bien-être n'ancre rien dans les workflows. Et quand le consultant repart, tout s'évapore en 6 semaines.
+            Les approches classiques partagent un point commun : elles se déroulent <strong>en dehors du travail réel.</strong> Un jour de séminaire ne change pas une habitude. Une conférence n'ancre rien dans les workflows. Et quand le consultant repart, tout s'évapore en 6 semaines.
         </p>
         <p class="problem-body reveal d2">
             La culture se construit dans les micro-moments du quotidien — le lundi matin, la réunion de 9h, la pause de 15h. Pas dans une salle de séminaire.
@@ -856,7 +917,7 @@
             </div>
             <div class="trap">
                 <div class="trap-x">✗</div>
-                <div class="trap-text"><strong>Séminaires bien-être ponctuels</strong> — le consultant part, la culture reste identique</div>
+                <div class="trap-text"><strong>Séminaires ponctuels</strong> — le consultant part, la culture reste identique</div>
             </div>
             <div class="trap">
                 <div class="trap-x">✗</div>
@@ -874,9 +935,9 @@
 <section class="method">
     <div class="method-inner">
         <div class="method-header reveal">
-            <div class="method-eyebrow">La méthode Équilibre Performance</div>
-            <h2>4 rituels. <em>Dans vos workflows.</em><br>Pas en dehors.</h2>
-            <p class="method-sub">Intégrés dans vos agendas, vos outils, votre organisation existante. Zéro disruption, impact immédiat.</p>
+            <div class="method-eyebrow">La méthode Momentum 180</div>
+            <h2>4 routines. <em>Dans vos workflows.</em><br>Pas en dehors.</h2>
+            <p class="method-sub">40 minutes par jour. 5% du temps de travail. Dans vos agendas, pas en dehors.</p>
         </div>
 
         <div class="rituals">
@@ -884,22 +945,22 @@
                 <div class="ritual-icon">🏋️</div>
                 <div>
                     <div class="ritual-tag">10 min · Chaque matin</div>
-                    <h4>Radio Taiso</h4>
-                    <p>Créé en 1928 par le gouvernement japonais : 13 mouvements simples — étirements, rotations, respirations — rythmés par une musique et des comptages vocaux. 3 à 5 minutes. Pratiqué chez Toyota depuis 70 ans. <strong>27 millions de pratiquants réguliers au Japon</strong> (Cabinet Office, gouvernement japonais, 2019). Zéro entreprise belge ne l'utilise encore — c'est précisément pourquoi ça crée une cohésion immédiate et mémorable dès le Jour 1.</p>
+                    <h4>Démarrage synchronisé</h4>
+                    <p>Casse la sédentarité dès 9h. Mobilisation adaptée bureau — pas de tenue de sport, pas de performance. Crée un moment de cohésion quotidien, pas une fois par trimestre. Inspiré du Radio Taiso, pratiqué chez Toyota depuis +70 ans — <strong>27 millions de Japonais 2×/semaine</strong>. Zéro entreprise belge ne l'utilise encore.</p>
                 </div>
             </div>
             <div class="ritual reveal d1">
                 <div class="ritual-icon">⏸️</div>
                 <div>
                     <div class="ritual-tag">10 min · 4× par jour (toutes les 90 min)</div>
-                    <h4>Pauses intelligentes (cycles 90 min)</h4>
-                    <p>Le cerveau fonctionne par cycles ultrадiens de 90 minutes. Ignorer ces cycles coûte de la productivité. Les respecter avec mobilisation articulaire et respiration guidée : <strong>+15 à 18% de concentration mesurée</strong>. 4 pauses intégrées dans la journée — pour éviter notamment l'effondrement cognitif de 14h.</p>
+                    <h4>Pauses de concentration</h4>
+                    <p>Le cerveau fonctionne par cycles ultradiens de 90 minutes. Ignorer ces cycles coûte de la productivité. Les respecter avec mobilisation ciblée et récupération cognitive : <strong>+15 à 18% de concentration mesurée</strong>. 4 pauses intégrées dans la journée — pour éviter notamment l'effondrement cognitif de 14h.</p>
                 </div>
             </div>
             <div class="ritual reveal d2">
                 <div class="ritual-icon">📅</div>
                 <div>
-                    <div class="ritual-tag">½ journée de formation · Intégré dans vos outils</div>
+                    <div class="ritual-tag">Formation 2h par service · Intégré dans vos outils</div>
                     <h4>Time Blocking</h4>
                     <p>Formation pratique avec intégration directe dans vos calendriers Outlook, Teams ou Google. Résultat cible : <strong>4 à 5 heures de productivité réelle récupérées par collaborateur, par semaine</strong> — via la structuration des plages de travail profond et la réduction des interruptions.</p>
                 </div>
@@ -907,36 +968,52 @@
             <div class="ritual reveal d3">
                 <div class="ritual-icon">🤝</div>
                 <div>
-                    <div class="ritual-tag">10h de formation · Suivi 6 mois inclus</div>
+                    <div class="ritual-tag">Min. 2 par service · Suivi 6 mois inclus</div>
                     <h4>Ambassadeurs internes</h4>
-                    <p>Je forme 2 relais dans votre équipe (½ journée S2 + ½ journée S3 + suivi mensuel 6 mois). Ce sont eux qui pilotent les rituels après mon départ. Pas de dépendance consultante, pas de rechute. La culture devient autonome — c'est l'objectif.</p>
+                    <p>Je forme des relais dans votre équipe. Ce sont eux qui pilotent les routines après mon départ. Pas de dépendance consultante, pas de rechute à 6 semaines. La méthode reste quand je pars — c'est l'objectif. Autonomie mesurée à J+180.</p>
                 </div>
             </div>
         </div>
 
         <div class="phases reveal">
             <div class="phase">
-                <div class="phase-badge">Phase 0</div>
+                <div class="phase-badge">S0</div>
                 <div class="phase-content">
-                    <div class="phase-when">1 journée sur site (7h)</div>
-                    <div class="phase-name">Diagnostic & co-construction</div>
-                    <div class="phase-desc">Audit culture actuelle avec direction/RH. Co-construction des rituels adaptés à votre contexte. Identification et briefing des 2 futurs ambassadeurs. Mesure de base (engagement, absentéisme, productivité perçue).</div>
+                    <div class="phase-when">1 journée sur site</div>
+                    <div class="phase-name">Cadrage</div>
+                    <div class="phase-desc">Rencontre avec dirigeants, managers et décideurs. Définition de la marche à suivre. Identification des ambassadeurs (minimum 2 par service). Co-construction des routines adaptées à votre culture.</div>
                 </div>
             </div>
             <div class="phase">
-                <div class="phase-badge">S1–3</div>
+                <div class="phase-badge">S1</div>
                 <div class="phase-content">
-                    <div class="phase-when">3 semaines intensives · ~35h Marjorie au total</div>
-                    <div class="phase-name">Implémentation des 4 rituels</div>
-                    <div class="phase-desc">S1 : Radio Taiso + pauses ultradian (1h/jour). S2 : formation time blocking ½ journée + ½ journée ambassadeurs. S3 : co-animation ambassadeurs + bilan + transmission complète des outils et protocoles.</div>
+                    <div class="phase-when">Journées complètes sur site</div>
+                    <div class="phase-name">Immersion</div>
+                    <div class="phase-desc">Présence sur site toute la journée. Les équipes s'habituent à Marjorie. Implémentation progressive des routines dans les workflows quotidiens. Conseil et ajustements en temps réel.</div>
+                </div>
+            </div>
+            <div class="phase">
+                <div class="phase-badge">S2</div>
+                <div class="phase-content">
+                    <div class="phase-when">Min. 4h/jour sur site</div>
+                    <div class="phase-name">Formation</div>
+                    <div class="phase-desc">Formation time blocking : 2h par service, max 20 personnes, réparti sur la semaine. Maintien des routines quotidiennes. Accompagnement terrain.</div>
+                </div>
+            </div>
+            <div class="phase">
+                <div class="phase-badge">S3</div>
+                <div class="phase-content">
+                    <div class="phase-when">4h/jour sur site</div>
+                    <div class="phase-name">Finalisation</div>
+                    <div class="phase-desc">Vérification de l'implémentation. Passage de relais aux ambassadeurs. Organisation du suivi sur 6 mois.</div>
                 </div>
             </div>
             <div class="phase">
                 <div class="phase-badge">M1–6</div>
                 <div class="phase-content">
-                    <div class="phase-when">6 mois · 1h/mois de check-in</div>
-                    <div class="phase-name">Consolidation par les ambassadeurs</div>
-                    <div class="phase-desc">Suivi à J+30, J+60, J+120, J+180. Les ambassadeurs pilotent, j'accompagne à distance. Rapport d'impact J+21 et J+180 avec données avant/après — absentéisme, engagement, productivité perçue.</div>
+                    <div class="phase-when">6 mois · À distance (+ sur site si nécessaire)</div>
+                    <div class="phase-name">Consolidation & autonomie</div>
+                    <div class="phase-desc">Rapport succinct des ambassadeurs 1×/mois. Recadrage à distance si nécessaire. Supplément si déplacement sur site requis. Récolte des chiffres et témoignages au bout des 6 mois.</div>
                 </div>
             </div>
         </div>
@@ -957,19 +1034,19 @@
                     <tr>
                         <th>Critère</th>
                         <th>Approches classiques</th>
-                        <th>Équilibre Performance</th>
+                        <th>Momentum 180</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Durée réelle</td>
                         <td><span class="badge badge-no">1 à 2 jours</span></td>
-                        <td><span class="badge badge-yes">3 semaines + 6 mois suivi</span></td>
+                        <td><span class="badge badge-yes">4 semaines + 6 mois suivi</span></td>
                     </tr>
                     <tr>
                         <td>Ancrage après départ</td>
                         <td><span class="badge badge-no">Aucun</span></td>
-                        <td><span class="badge badge-yes">2 ambassadeurs formés</span></td>
+                        <td><span class="badge badge-yes">Ambassadeurs formés par service</span></td>
                     </tr>
                     <tr>
                         <td>Intégration workflows</td>
@@ -979,7 +1056,7 @@
                     <tr>
                         <td>Mesure avant / après</td>
                         <td><span class="badge badge-no">Rarement</span></td>
-                        <td><span class="badge badge-yes">Données J1 → J180</span></td>
+                        <td><span class="badge badge-yes">Données J+21 → J+180</span></td>
                     </tr>
                     <tr>
                         <td>Risque financier</td>
@@ -1007,29 +1084,29 @@
     <div class="pricing-inner">
         <div class="pricing-eyebrow reveal">Offre pilote 2026</div>
         <h2 class="reveal d1">Tout inclus.<br><em>Zéro risque.</em></h2>
-        <p class="pricing-sub reveal d2">3 places uniquement. Je sélectionne les organisations où la méthode a le plus de chances de produire des résultats mesurables — on le voit ensemble en 15 minutes.</p>
+        <p class="pricing-sub reveal d2">2 organisations partenaires uniquement. Je sélectionne les structures où la méthode a le plus de chances de produire des résultats mesurables — on le voit ensemble en 15 minutes.</p>
 
         <div class="pricing-card reveal d2">
-            <div class="pricing-badge">Pilote · 3 places · 2026</div>
-            <div class="price"><sup>€</sup>800</div>
-            <div class="price-detail">HTVA · Par entreprise · Tout inclus · Aucun frais caché</div>
+            <div class="pricing-badge">Pilote · 2 places · 2026</div>
+            <div class="price"><sup>€</sup>1 500</div>
+            <div class="price-detail">HTVA · Par organisation · Tout inclus · Aucun frais caché</div>
             <div class="price-items">
-                <div class="price-item"><span class="price-check">✓</span> Diagnostic culture (1 semaine avant)</div>
-                <div class="price-item"><span class="price-check">✓</span> 3 semaines sur site · 1h/jour</div>
-                <div class="price-item"><span class="price-check">✓</span> Formation 2 ambassadeurs internes</div>
+                <div class="price-item"><span class="price-check">✓</span> Cadrage avec dirigeants et managers (1 journée)</div>
+                <div class="price-item"><span class="price-check">✓</span> 4 semaines sur site (immersion, formation, finalisation)</div>
+                <div class="price-item"><span class="price-check">✓</span> Formation ambassadeurs internes (min. 2 par service)</div>
                 <div class="price-item"><span class="price-check">✓</span> Tous outils, templates & supports</div>
-                <div class="price-item"><span class="price-check">✓</span> 6 mois de check-ins mensuels</div>
-                <div class="price-item"><span class="price-check">✓</span> Rapport final données avant / après</div>
+                <div class="price-item"><span class="price-check">✓</span> 6 mois de suivi + rapport d'impact</div>
+                <div class="price-item"><span class="price-check">✓</span> Formations time blocking par service</div>
             </div>
             <a href="https://calendly.com/equilibre_performance/equilibreperformance" target="_blank" class="btn-book">
-                → Postuler pour le pilote — Diagnostic gratuit
+                → Réserver un diagnostic — 15 minutes
             </a>
-            <p class="book-note">15 minutes · Zéro engagement · Je vous dis franchement si ça correspond</p>
+            <p class="book-note">Zéro engagement · Je vous dis franchement si ça correspond</p>
             <div class="guarantee">
                 <div class="guarantee-icon">🛡️</div>
                 <div>
                     <div class="guarantee-title">Garantie Jour 3 — Risque zéro</div>
-                    <div class="guarantee-text">Après 3 jours, si la méthode ne convient pas à votre organisation : vous résiliez. 50% remboursé immédiatement. Vous conservez tous les outils, formations et supports reçus. Aucune question posée.</div>
+                    <div class="guarantee-text">Après 3 jours, si la méthode ne convient pas à votre organisation : 50% remboursé immédiatement. Vous conservez tous les outils, formations et supports reçus. Sans discussion.</div>
                 </div>
             </div>
         </div>
@@ -1043,16 +1120,16 @@
         <div class="reveal d1">
             <div class="about-eyebrow">Marjorie Mathieu</div>
             <h3>Je ne théorise pas.<br>Je <em>m'immerge.</em></h3>
-            <p>15 ans dans des environnements corporate sédentaires — BNP Paribas, Serco Europe, CEPI Brussels, KONE, STIB — m'ont appris une chose : les séminaires s'oublient, les habitudes restent. C'est pour ça que je ne fais pas de conférences. Je viens dans vos bureaux, je forme vos équipes, et je construis avec vous une culture qui tient.</p>
-            <p>14 ans de pratique et d'enseignement des techniques de régulation physique et cognitive — appliquées comme outils opérationnels, pas comme philosophie personnelle. Créatrice de la méthode Horizon Impact (2026) : performance alignée, vision stratégique et capacité humaine durable. Approche 100% data-driven — aucun résultat présenté sans source vérifiée.</p>
+            <p>15 ans dans des environnements corporate sédentaires — BNP Paribas, Serco Europe, CEPI Brussels, KONE, STIB — m'ont appris une chose : les séminaires s'oublient, les habitudes restent. C'est pour ça que je ne fais pas de conférences. Je viens dans vos bureaux, je forme vos équipes, et je construis avec vous une culture opérationnelle qui tient.</p>
+            <p>14 ans de pratique et d'enseignement des techniques de régulation physique et cognitive — appliquées comme outils opérationnels, pas comme philosophie personnelle. Créatrice de Momentum 180 (2026). Approche 100% data-driven — aucun résultat présenté sans source vérifiée.</p>
             <div class="about-tags">
                 <span class="about-tag">BNP Paribas · Serco · CEPI Brussels · KONE · STIB</span>
                 <span class="about-tag">15 ans corporate</span>
-                <span class="about-tag">14 ans de pratique des rituels de performance collective</span>
+                <span class="about-tag">14 ans de pratique des routines opérationnelles intégrées</span>
                 <span class="about-tag">Formatrice IA — Kitchy Agency</span>
                 <span class="about-tag">Smart Coop · Ath, Hainaut</span>
             </div>
-            <a href="https://www.linkedin.com/in/equilibreperformance/" target="_blank" class="about-link">
+            <a href="https://www.linkedin.com/in/momentum180/" target="_blank" class="about-link">
                 Mon parcours complet sur LinkedIn →
             </a>
         </div>
@@ -1074,21 +1151,20 @@
         </p>
         <div class="finale-sep reveal"></div>
         <div class="finale-spots reveal">
-            <div class="f-spot gone"></div>
             <div class="f-spot open"></div>
             <div class="f-spot open"></div>
         </div>
-        <p class="finale-spots-txt reveal"><strong>2 places disponibles</strong> sur 3 — Pilote 2026 · 800€ HTVA</p>
+        <p class="finale-spots-txt reveal"><strong>2 places partenaires</strong> — Pilote 2026 · 1 500€ HTVA</p>
         <a href="https://calendly.com/equilibre_performance/equilibreperformance" target="_blank" class="btn-finale reveal d2">
-            → Réserver un diagnostic gratuit
+            → Réserver un diagnostic — 15 minutes
         </a>
-        <p class="finale-note reveal d3">15 minutes · Zéro engagement · Diagnostic offert</p>
+        <p class="finale-note reveal d3">Zéro engagement · Diagnostic offert</p>
     </div>
 </section>
 
 <!-- ═══ FOOTER ════════════════════════════════════ -->
 <footer>
-    <div class="footer-brand">Marjorie Mathieu — Équilibre Performance</div>
+    <div class="footer-brand">Marjorie Mathieu — Momentum 180</div>
     <div class="footer-contact">
         <a href="mailto:hello@marjoriemathieu.be">hello@marjoriemathieu.be</a> · +32 477 09 18 03 · Ath, Hainaut — Belgique
     </div>
