@@ -232,6 +232,231 @@
         .stat-label { font-size:0.8rem; color:rgba(255,255,255,0.6); line-height:1.5; }
         .stat-src   { font-size:0.65rem; color:rgba(255,255,255,0.25); margin-top:0.4rem; }
 
+        /* ── CALCULATEUR ─────────────────────── */
+        .calculator {
+            padding: 6rem 6%;
+            background: #f8f7f5;
+        }
+        .calculator-inner { max-width: 860px; margin: 0 auto; }
+        .calculator-header { margin-bottom: 3rem; }
+        .calculator-header h2 {
+            font-family: var(--serif);
+            font-size: clamp(1.8rem, 3.5vw, 3rem);
+            font-weight: 700; line-height: 1.15; color: var(--navy);
+            margin-bottom: 0.7rem;
+        }
+        .calculator-header h2 em { font-style: italic; color: var(--coral); }
+        .calculator-header p { font-size: 0.97rem; color: #3d4f6b; line-height: 1.7; }
+
+        .calc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .calc-field {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .calc-field label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--navy);
+        }
+        .calc-field .field-hint {
+            font-size: 0.72rem;
+            color: #6b7fa0;
+            margin-top: -0.3rem;
+        }
+        .calc-field input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 4px;
+            border-radius: 2px;
+            background: #dde3ed;
+            outline: none;
+            cursor: pointer;
+        }
+        .calc-field input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px; height: 20px;
+            border-radius: 50%;
+            background: var(--coral);
+            cursor: pointer;
+            border: 3px solid white;
+            box-shadow: 0 1px 6px rgba(224,122,95,0.4);
+            transition: transform 0.15s;
+        }
+        .calc-field input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.15); }
+        .calc-field input[type="range"]::-moz-range-thumb {
+            width: 20px; height: 20px;
+            border-radius: 50%;
+            background: var(--coral);
+            cursor: pointer;
+            border: 3px solid white;
+        }
+        .range-val {
+            font-family: var(--serif);
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1;
+        }
+        .range-unit {
+            font-size: 0.75rem;
+            color: #6b7fa0;
+            margin-top: 2px;
+        }
+
+        .calc-select {
+            padding: 0.7rem 1rem;
+            border: 1px solid rgba(27,54,93,0.15);
+            border-radius: 6px;
+            font-family: var(--sans);
+            font-size: 0.9rem;
+            color: var(--navy);
+            background: white;
+            cursor: pointer;
+            outline: none;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%231B365D' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            padding-right: 2rem;
+        }
+
+        .calc-loi-banner {
+            background: rgba(224,122,95,0.08);
+            border: 1px solid rgba(224,122,95,0.25);
+            border-radius: 8px;
+            padding: 1rem 1.2rem;
+            font-size: 0.82rem;
+            color: #5a3328;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        .calc-loi-banner strong { color: var(--coral); }
+
+        .calc-result {
+            background: var(--navy-dark);
+            border-radius: 14px;
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .calc-result::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse 60% 60% at 90% 10%, rgba(224,122,95,0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .calc-result-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .calc-res-block {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 10px;
+            padding: 1.2rem 1rem;
+        }
+        .calc-res-block.highlight {
+            background: rgba(224,122,95,0.15);
+            border-color: rgba(224,122,95,0.3);
+        }
+        .calc-res-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: rgba(255,255,255,0.45);
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        .calc-res-val {
+            font-family: var(--serif);
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: white;
+            line-height: 1;
+        }
+        .calc-res-block.highlight .calc-res-val { color: var(--coral-light); font-size: 2.2rem; }
+        .calc-res-sub {
+            font-size: 0.72rem;
+            color: rgba(255,255,255,0.4);
+            margin-top: 0.3rem;
+            line-height: 1.4;
+        }
+
+        .calc-roi-bar {
+            margin-top: 1.5rem;
+        }
+        .calc-roi-bar-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.55);
+            margin-bottom: 0.5rem;
+        }
+        .calc-roi-track {
+            background: rgba(255,255,255,0.08);
+            border-radius: 4px;
+            height: 8px;
+            overflow: hidden;
+        }
+        .calc-roi-fill {
+            height: 100%;
+            border-radius: 4px;
+            background: linear-gradient(90deg, var(--coral), var(--coral-light));
+            transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            width: 0%;
+        }
+
+        .calc-verdict {
+            margin-top: 1.5rem;
+            padding: 1rem 1.2rem;
+            background: rgba(255,255,255,0.04);
+            border-left: 2px solid var(--coral);
+            border-radius: 0 6px 6px 0;
+            font-size: 0.88rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.6;
+            font-style: italic;
+        }
+        .calc-cta {
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+        .calc-cta a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--coral);
+            color: white;
+            padding: 0.8rem 1.6rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+        .calc-cta a:hover { background: #c9634a; transform: translateY(-1px); }
+        .calc-cta-note {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.4);
+            line-height: 1.5;
+        }
+
         /* ── PROBLÈME (narrative) ────────────── */
         .problem { padding: 6rem 6%; }
         .problem-inner { max-width:820px; margin:0 auto; }
@@ -531,6 +756,12 @@
             font-weight:700; line-height:1; color:var(--navy);
         }
         .price sup { font-size:0.35em; vertical-align:super; opacity:0.5; font-weight:400; }
+        .price-anchor {
+            font-size:0.8rem;
+            color:#8a9ab5;
+            text-decoration:line-through;
+            margin-bottom:0.1rem;
+        }
         .price-detail { font-size:0.8rem; color:#3d4f6b; margin-top:0.3rem; margin-bottom:2rem; }
         .price-items {
             display:grid; grid-template-columns:1fr 1fr;
@@ -710,6 +941,8 @@
             .about-inner { grid-template-columns:1fr; text-align:center; }
             .about-tags { justify-content:center; }
             .about-avatar { margin:0 auto; }
+            .calc-grid { grid-template-columns:1fr; }
+            .calc-result-grid { grid-template-columns:1fr; }
         }
         @media (max-width:680px) {
             .hero h1 { font-size:2.2rem; }
@@ -740,7 +973,7 @@
 
         <div class="eyebrow">
             <div class="eyebrow-line"></div>
-            <div class="eyebrow-text">Programme pilote · Organisations 50–200 collaborateurs · Hainaut & Wallonie</div>
+            <div class="eyebrow-text">Programme pilote · Organisations 50–200 collaborateurs · Hainaut &amp; Wallonie</div>
         </div>
 
         <h1>
@@ -810,6 +1043,99 @@
                 <div class="stat-num">40%</div>
                 <div class="stat-label">Des travailleurs belges concernés par le risque de burn-out</div>
                 <div class="stat-src">AG Insurance 2024</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ CALCULATEUR ROI ═══════════════════════════ -->
+<section class="calculator" id="calculateur">
+    <div class="calculator-inner">
+        <div class="calculator-header reveal">
+            <div class="section-label">
+                <div class="section-label-line"></div>
+                <div class="section-label-text">Calculateur de coût réel</div>
+            </div>
+            <h2>Combien vous coûte<br><em>l'absentéisme aujourd'hui ?</em></h2>
+            <p>Ajustez les curseurs selon votre situation réelle. Les chiffres s'adaptent instantanément — basés sur les données SD Worx 2025 et la loi fédérale belge de janvier 2026.</p>
+        </div>
+
+        <div class="calc-loi-banner reveal d1">
+            <strong>⚠ Loi fédérale du 1er janvier 2026 :</strong> Les employeurs de 50+ travailleurs paient désormais 30% des indemnités maladie des 2e et 3e mois d'incapacité. Ce calculateur intègre ce surcoût dans le total.
+        </div>
+
+        <div class="calc-grid reveal d2">
+            <div class="calc-field">
+                <label>Nombre de collaborateurs</label>
+                <div class="field-hint">Effectif total de votre organisation</div>
+                <div class="range-val" id="etp-val">75</div>
+                <div class="range-unit">collaborateurs (ETP)</div>
+                <input type="range" id="etp" min="10" max="300" step="5" value="75" oninput="updateCalc()">
+            </div>
+            <div class="calc-field">
+                <label>Taux d'absentéisme actuel</label>
+                <div class="field-hint">Moyenne belge : 6,9% (SD Worx 2025)</div>
+                <div class="range-val" id="taux-val">6.9<span style="font-size:1.2rem">%</span></div>
+                <div class="range-unit">du temps de travail</div>
+                <input type="range" id="taux" min="2" max="18" step="0.1" value="6.9" oninput="updateCalc()">
+            </div>
+            <div class="calc-field">
+                <label>Salaire brut mensuel moyen</label>
+                <div class="field-hint">Moyenne belge : 3 650€ brut/mois</div>
+                <div class="range-val" id="sal-val">3 650<span style="font-size:1.2rem">€</span></div>
+                <div class="range-unit">brut / collaborateur / mois</div>
+                <input type="range" id="sal" min="2000" max="7000" step="50" value="3650" oninput="updateCalc()">
+            </div>
+            <div class="calc-field">
+                <label>Part d'arrêts longs (&gt;30 jours)</label>
+                <div class="field-hint">Proportion des absences de longue durée</div>
+                <div class="range-val" id="long-val">35<span style="font-size:1.2rem">%</span></div>
+                <div class="range-unit">des absences sont des arrêts longs</div>
+                <input type="range" id="long" min="10" max="70" step="5" value="35" oninput="updateCalc()">
+            </div>
+        </div>
+
+        <div class="calc-result reveal d3">
+            <div class="calc-result-grid">
+                <div class="calc-res-block">
+                    <div class="calc-res-label">Coût direct estimé / an</div>
+                    <div class="calc-res-val" id="res-direct">—</div>
+                    <div class="calc-res-sub">Salaires maintenus + remplacements</div>
+                </div>
+                <div class="calc-res-block">
+                    <div class="calc-res-label">Surcoût loi 2026 / an</div>
+                    <div class="calc-res-val" id="res-loi">—</div>
+                    <div class="calc-res-sub">30% indemnités mois 2 et 3 (arrêts &gt;30j)</div>
+                </div>
+                <div class="calc-res-block highlight">
+                    <div class="calc-res-label">Coût total estimé / an</div>
+                    <div class="calc-res-val" id="res-total">—</div>
+                    <div class="calc-res-sub">Impact réel sur votre bilan</div>
+                </div>
+            </div>
+
+            <div class="calc-roi-bar">
+                <div class="calc-roi-bar-label">
+                    <span>Investissement Momentum 180 (3 000€)</span>
+                    <span id="res-roi-pct">—</span>
+                </div>
+                <div class="calc-roi-track">
+                    <div class="calc-roi-fill" id="roi-fill"></div>
+                </div>
+            </div>
+
+            <div class="calc-verdict" id="res-verdict">
+                Ajustez les curseurs pour voir votre situation.
+            </div>
+
+            <div class="calc-cta">
+                <a href="https://calendly.com/equilibre_performance/equilibreperformance" target="_blank">
+                    → Discuter de ces chiffres — 15 min
+                </a>
+                <div class="calc-cta-note">
+                    Je vous dis si une réduction de 20% est réaliste pour votre organisation.<br>
+                    Pas un pitch — un diagnostic honnête.
+                </div>
             </div>
         </div>
     </div>
@@ -951,7 +1277,7 @@
                 <div class="phase-badge">M1–6</div>
                 <div class="phase-content">
                     <div class="phase-when">6 mois · À distance (+ sur site si nécessaire)</div>
-                    <div class="phase-name">Autonomie & consolidation</div>
+                    <div class="phase-name">Autonomie &amp; consolidation</div>
                     <div class="phase-desc">Rapport succinct des ambassadeurs 1×/mois. Recadrage à distance. Récolte des métriques et témoignages à J+180. Le rapport d'impact est un document de pilotage partageable en interne — pas une impression.</div>
                 </div>
             </div>
@@ -967,7 +1293,7 @@
                 <div class="section-label-line"></div>
                 <div class="section-label-text">Impact financier</div>
             </div>
-            <h2>1 500€ investis.<br><em>Retour potentiel ×10 en 6 mois.</em></h2>
+            <h2>3 000€ investis.<br><em>Retour potentiel ×5 à ×10 en 6 mois.</em></h2>
             <p class="roi-sub">Calcul basé sur une cible de réduction de 20% de l'absentéisme — objectif réaliste sur 6 mois. Pas une promesse contractuelle.</p>
         </div>
 
@@ -989,7 +1315,7 @@
                     <div class="roi-eq-label">Économies potentielles/an</div>
                 </div>
             </div>
-            <div class="roi-footnote">Investissement pilote : 1 500€ HTVA — retour potentiel ×10. Ces cibles seront mesurées et documentées dans le rapport J+180.</div>
+            <div class="roi-footnote">Investissement pilote : 3 000€ HTVA — retour potentiel ×5 à ×10. Ces cibles seront mesurées et documentées dans le rapport J+180. Utilisez le calculateur ci-dessus pour estimer votre situation précise.</div>
         </div>
 
         <div class="roi-extras reveal d2">
@@ -1075,20 +1401,21 @@
 
         <div class="pricing-card reveal d2">
             <div class="pricing-badge">Pilote · 2 places · 2026</div>
-            <div class="price"><sup>€</sup>1 500</div>
+            <div class="price-anchor">Tarif standard post-pilote : à partir de 6 000€</div>
+            <div class="price"><sup>€</sup>3 000</div>
             <div class="price-detail">HTVA · Par organisation · Tout inclus · Aucun frais caché</div>
             <div class="price-items">
                 <div class="price-item"><span class="price-check">✓</span> Cadrage avec dirigeants et managers (1 journée)</div>
                 <div class="price-item"><span class="price-check">✓</span> 4 semaines sur site (immersion, formation, finalisation)</div>
                 <div class="price-item"><span class="price-check">✓</span> Formations time blocking par service (max 20 pers.)</div>
                 <div class="price-item"><span class="price-check">✓</span> Formation ambassadeurs internes (min. 2 par service)</div>
-                <div class="price-item"><span class="price-check">✓</span> Tous outils, templates & supports</div>
+                <div class="price-item"><span class="price-check">✓</span> Tous outils, templates &amp; supports</div>
                 <div class="price-item"><span class="price-check">✓</span> 6 mois de suivi + rapports J+21 et J+180</div>
             </div>
             <a href="https://calendly.com/equilibre_performance/equilibreperformance" target="_blank" class="btn-book">
                 → Réserver un diagnostic — 15 minutes
             </a>
-            <p class="book-note">Zéro engagement · Je vous dis franchement si ça correspond</p>
+            <p class="book-note">Zéro engagement · Garantie Jour 3 : 50% remboursé si ça ne correspond pas — vous gardez tous les outils</p>
             <div class="counterparts">
                 <div class="counterparts-title">Ce que je demande en contrepartie</div>
                 <div class="counterparts-text">Accès direct aux équipes · Participation active de la direction · Feedback structuré au fil du programme · Accès aux métriques pour les rapports J+21 et J+180 · Témoignage écrit ou vidéo en fin de mission.</div>
@@ -1136,7 +1463,7 @@
 
         <div class="objection reveal d2">
             <div class="objection-q">« Il n'y a pas de preuve que ça marche chez nous. »</div>
-            <div class="objection-a">C'est le principe du pilote. <strong>1 500€ pour co-construire les premiers résultats belges.</strong> Les chiffres J+180 parleront — c'est pour ça que les métriques font partie des contreparties attendues.</div>
+            <div class="objection-a">C'est le principe du pilote. <strong>3 000€ pour co-construire les premiers résultats belges.</strong> Les chiffres J+180 parleront — c'est pour ça que les métriques font partie des contreparties attendues. Et si après 3 jours ça ne colle pas : 50% remboursé, vous gardez tous les outils.</div>
         </div>
 
         <div class="objection reveal d2">
@@ -1162,7 +1489,7 @@
             <div class="f-spot open"></div>
             <div class="f-spot open"></div>
         </div>
-        <p class="finale-spots-txt reveal"><strong>2 places partenaires</strong> — Pilote 2026 · 1 500€ HTVA</p>
+        <p class="finale-spots-txt reveal"><strong>2 places partenaires</strong> — Pilote 2026 · 3 000€ HTVA</p>
         <a href="https://calendly.com/equilibre_performance/equilibreperformance" target="_blank" class="btn-finale reveal d2">
             → 15 minutes pour voir si ça correspond
         </a>
@@ -1179,6 +1506,7 @@
 </footer>
 
 <script>
+    /* ── SCROLL REVEAL ── */
     const obs = new IntersectionObserver(entries => {
         entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
@@ -1188,6 +1516,69 @@
         document.getElementById('nav').style.boxShadow =
             window.scrollY > 50 ? '0 4px 20px rgba(27,54,93,0.1)' : 'none';
     });
+
+    /* ── CALCULATEUR ROI ── */
+    const PROGRAMME_COST = 3000;
+    const COUT_PAR_ETP_HAINAUT = 1654.25; // 165425 / 100
+
+    function fmt(n) {
+        return Math.round(n).toLocaleString('fr-BE') + '€';
+    }
+
+    function updateCalc() {
+        const etp   = parseFloat(document.getElementById('etp').value);
+        const taux  = parseFloat(document.getElementById('taux').value);
+        const sal   = parseFloat(document.getElementById('sal').value);
+        const longP = parseFloat(document.getElementById('long').value) / 100;
+
+        document.getElementById('etp-val').textContent  = Math.round(etp);
+        document.getElementById('taux-val').innerHTML   = taux.toFixed(1) + '<span style="font-size:1.2rem">%</span>';
+        document.getElementById('sal-val').innerHTML    = Math.round(sal).toLocaleString('fr-BE') + '<span style="font-size:1.2rem">€</span>';
+        document.getElementById('long-val').innerHTML   = Math.round(longP * 100) + '<span style="font-size:1.2rem">%</span>';
+
+        // Coût direct : base SD Worx ajustée à l'effectif et au taux réel vs moyenne belge (6.9%)
+        const tauxMoy = 6.9;
+        const coutBase = etp * COUT_PAR_ETP_HAINAUT;
+        const coutAjuste = coutBase * (taux / tauxMoy);
+
+        // Surcoût loi 2026 : arrêts longs (>30j) → employeur paie 30% indemnités mois 2 et 3
+        // Estimation : durée moyenne arrêt long = 90j → 2 mois indemnisés à 60% salaire brut
+        const nbArretLong = etp * (taux / 100) * longP;
+        const indemnitesMensuelle = sal * 0.60;
+        const surcoutLoi = nbArretLong * (indemnitesMensuelle * 2) * 0.30;
+
+        const total = coutAjuste + surcoutLoi;
+        const savings20 = total * 0.20;
+        const roi = savings20 / PROGRAMME_COST;
+        const roiPct = Math.min((PROGRAMME_COST / savings20) * 100, 100);
+
+        document.getElementById('res-direct').textContent = fmt(coutAjuste);
+        document.getElementById('res-loi').textContent    = fmt(surcoutLoi);
+        document.getElementById('res-total').textContent  = fmt(total);
+
+        const roiFill = document.getElementById('roi-fill');
+        const barPct  = Math.min((PROGRAMME_COST / savings20) * 100, 100);
+        roiFill.style.width = barPct.toFixed(1) + '%';
+
+        const roiX = (savings20 / PROGRAMME_COST).toFixed(1);
+        document.getElementById('res-roi-pct').textContent =
+            '= ' + barPct.toFixed(0) + "% de l\u2019\u00e9conomie \u00e0 J+180 si \u221220%";
+
+        let verdict = '';
+        if (savings20 <= 0 || !isFinite(savings20)) {
+            verdict = 'Ajustez les curseurs pour voir votre situation.';
+        } else if (roi >= 5) {
+            verdict = `Sur la base de vos paramètres, une réduction de 20% de l'absentéisme représente ${fmt(savings20)}/an — soit un retour de ×${roiX} sur l'investissement de ${fmt(PROGRAMME_COST)}. Pour ${Math.round(etp)} collaborateurs, le programme se rentabilise en moins de 3 mois.`;
+        } else if (roi >= 2) {
+            verdict = `Une réduction de 20% représente ${fmt(savings20)}/an pour votre organisation — soit ×${roiX} l'investissement. Le surcoût loi 2026 seul (${fmt(surcoutLoi)}/an) justifie une action préventive.`;
+        } else {
+            verdict = `Votre coût d'absentéisme estimé est de ${fmt(total)}/an. Une réduction de 20% = ${fmt(savings20)}/an. Discutons ensemble si Momentum 180 est le levier le plus adapté à votre situation.`;
+        }
+        document.getElementById('res-verdict').textContent = verdict;
+    }
+
+    // Init on load
+    updateCalc();
 </script>
 </body>
 </html>
