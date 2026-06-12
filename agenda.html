@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr-BE" id="html-root">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agenda – Cours &amp; Ateliers | IFSU Équilibre – Marjorie Mathieu</title>
+<meta name="description" content="Agenda des cours de Viniyoga, ateliers et événements IFSU Équilibre à Ath. Horaires fixes et prochains ateliers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared-styles.css">
+<style>
+.page-header { padding:10rem 2rem 5rem; background:var(--lin); }
+.page-header-inner { max-width:1100px; margin:0 auto; }
+.breadcrumb { font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(74,98,116,0.5); margin-bottom:1.5rem; }
+.breadcrumb a { color:rgba(74,98,116,0.5); text-decoration:none; }
+
+.agenda-section { margin-bottom:3rem; }
+.agenda-title { font-size:0.72rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); margin-bottom:1.2rem; }
+.agenda-row { display:flex; gap:1.5rem; align-items:flex-start; padding:1.2rem 1.5rem; background:var(--white); border:0.5px solid rgba(74,98,116,0.1); border-radius:4px; margin-bottom:0.6rem; transition:all 0.25s; text-decoration:none; }
+.agenda-row:hover { border-color:rgba(74,98,116,0.25); transform:translateY(-1px); }
+.agenda-day { font-family:'Cormorant Garamond',serif; font-size:1.1rem; color:var(--gold); min-width:110px; flex-shrink:0; font-weight:400; }
+.agenda-info { flex:1; }
+.agenda-info h4 { font-size:0.92rem; color:var(--ardoise-deep); margin-bottom:0.2rem; font-weight:500; }
+.agenda-info p { font-size:0.8rem; color:#5a7a8e; line-height:1.5; }
+.agenda-badge { font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; padding:0.2rem 0.6rem; border-radius:2px; flex-shrink:0; align-self:flex-start; }
+.badge-yoga { background:rgba(74,98,116,0.1); color:var(--ardoise); }
+.badge-meditation { background:rgba(201,168,76,0.12); color:var(--gold); }
+.badge-atelier { background:rgba(196,113,74,0.1); color:var(--terracotta); }
+.badge-retraite { background:rgba(201,168,76,0.2); color:var(--ardoise-deep); }
+.badge-gratuit { background:rgba(74,98,116,0.08); color:var(--ardoise); border:0.5px solid rgba(74,98,116,0.2); }
+
+.agenda-event { padding:1.8rem; background:rgba(201,168,76,0.07); border:0.5px solid rgba(201,168,76,0.3); border-radius:4px; margin-bottom:1rem; }
+.agenda-event-date { font-family:'Cormorant Garamond',serif; font-size:1.6rem; color:var(--terracotta); margin-bottom:0.3rem; }
+.agenda-event h4 { font-size:1rem; color:var(--ardoise-deep); margin-bottom:0.5rem; }
+.agenda-event p { font-size:0.85rem; color:#5a7a8e; line-height:1.7; }
+
+.momoyoga-embed { background:var(--white); border:0.5px solid rgba(74,98,116,0.12); border-radius:4px; padding:2rem; text-align:center; margin-top:2rem; }
+.momoyoga-embed p { font-size:0.9rem; color:#3d5a6e; margin-bottom:1.5rem; }
+</style>
+</head>
+<body class="fr">
+
+<div class="social-float">
+  <a href="https://www.facebook.com/IFSU.Yoga.Meditation.Ath" target="_blank" rel="noopener noreferrer nofollow" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+</div>
+
+<nav>
+  <a href="index.html" class="nav-logo">IFSU Équilibre <span>·</span> Marjorie M.</a>
+  <div class="nav-links">
+    <a href="yoga.html"><span class="lang-fr">Yoga</span><span class="lang-en">Yoga</span></a>
+    <a href="meditation.html"><span class="lang-fr">Méditation</span><span class="lang-en">Meditation</span></a>
+    <a href="retraite.html"><span class="lang-fr">Retraite</span><span class="lang-en">Retreat</span></a>
+    <a href="ateliers.html"><span class="lang-fr">Ateliers</span><span class="lang-en">Workshops</span></a>
+    <a href="entreprises.html"><span class="lang-fr">Entreprises</span><span class="lang-en">Companies</span></a>
+    <a href="qui-suis-je.html"><span class="lang-fr">Qui suis-je</span><span class="lang-en">About</span></a>
+    <a href="agenda.html" style="color:var(--gold)"><span class="lang-fr">Agenda</span><span class="lang-en">Schedule</span></a>
+    <a href="https://wa.me/32477091803" class="nav-cta"><span class="lang-fr">Contact</span><span class="lang-en">Contact</span></a>
+  </div>
+  <div class="lang-switcher">
+    <button class="lang-btn active" id="btn-fr" onclick="switchLang('fr')">FR</button>
+    <button class="lang-btn" id="btn-en" onclick="switchLang('en')">EN</button>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <p class="breadcrumb"><a href="index.html">Accueil</a> / <span class="lang-fr">Agenda</span><span class="lang-en">Schedule</span></p>
+    <p class="section-eyebrow eyebrow-gold"><span class="lang-fr">Cours, ateliers &amp; événements</span><span class="lang-en">Classes, workshops &amp; events</span></p>
+    <h1 class="section-title" style="font-size:clamp(2.5rem,5vw,4rem);">
+      <span class="lang-fr">L'agenda <em>IFSU</em></span>
+      <span class="lang-en">The IFSU <em>schedule</em></span>
+    </h1>
+  </div>
+</div>
+
+<section class="section-light">
+  <div class="section-inner">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:start;" class="reveal">
+
+      <!-- COURS FIXES -->
+      <div>
+        <div class="agenda-section">
+          <div class="agenda-title"><span class="lang-fr">Cours hebdomadaires fixes – Viniyoga</span><span class="lang-en">Fixed weekly classes – Viniyoga</span></div>
+
+          <a href="https://www.momoyoga.com/ifsu/" target="_blank" rel="noopener" class="agenda-row">
+            <div class="agenda-day"><span class="lang-fr">Lundi<br>9h00</span><span class="lang-en">Monday<br>9:00 AM</span></div>
+            <div class="agenda-info">
+              <h4>Viniyoga</h4>
+              <p><span class="lang-fr">Studio IFSU · Rue des Hauts-Degrés 20, 7800 Ath<br>90 min · max 6 personnes</span><span class="lang-en">Studio IFSU · 20 Rue des Hauts-Degrés, 7800 Ath<br>90 min · max 6 people</span></p>
+            </div>
+            <span class="agenda-badge badge-yoga">Yoga</span>
+          </a>
+
+          <a href="https://www.momoyoga.com/ifsu/" target="_blank" rel="noopener" class="agenda-row">
+            <div class="agenda-day"><span class="lang-fr">Mardi<br>18h30</span><span class="lang-en">Tuesday<br>6:30 PM</span></div>
+            <div class="agenda-info">
+              <h4>Viniyoga</h4>
+              <p><span class="lang-fr">Studio IFSU · Rue des Hauts-Degrés 20, 7800 Ath<br>90 min · max 6 personnes</span><span class="lang-en">Studio IFSU · 20 Rue des Hauts-Degrés, 7800 Ath<br>90 min · max 6 people</span></p>
+            </div>
+            <span class="agenda-badge badge-yoga">Yoga</span>
+          </a>
+
+          <a href="https://www.momoyoga.com/ifsu/" target="_blank" rel="noopener" class="agenda-row">
+            <div class="agenda-day"><span class="lang-fr">Mercredi<br>9h00</span><span class="lang-en">Wednesday<br>9:00 AM</span></div>
+            <div class="agenda-info">
+              <h4>Viniyoga</h4>
+              <p><span class="lang-fr">Studio IFSU · Rue des Hauts-Degrés 20, 7800 Ath<br>90 min · max 6 personnes</span><span class="lang-en">Studio IFSU · 20 Rue des Hauts-Degrés, 7800 Ath<br>90 min · max 6 people</span></p>
+            </div>
+            <span class="agenda-badge badge-yoga">Yoga</span>
+          </a>
+
+          <a href="https://www.momoyoga.com/ifsu/" target="_blank" rel="noopener" class="agenda-row">
+            <div class="agenda-day"><span class="lang-fr">Mercredi<br>18h30</span><span class="lang-en">Wednesday<br>6:30 PM</span></div>
+            <div class="agenda-info">
+              <h4>Viniyoga</h4>
+              <p><span class="lang-fr">Centre Équilibre · Rue des Hauts-Degrés 18, 7800 Ath<br>90 min · max 12 personnes</span><span class="lang-en">Centre Équilibre · 18 Rue des Hauts-Degrés, 7800 Ath<br>90 min · max 12 people</span></p>
+            </div>
+            <span class="agenda-badge badge-yoga">Yoga</span>
+          </a>
+        </div>
+
+        <div class="agenda-section">
+          <div class="agenda-title"><span class="lang-fr">Méditation – groupe hebdomadaire</span><span class="lang-en">Meditation – weekly group</span></div>
+          <div class="agenda-row" style="cursor:default;">
+            <div class="agenda-day"><span class="lang-fr">Hebdo<br>variable</span><span class="lang-en">Weekly<br>variable</span></div>
+            <div class="agenda-info">
+              <h4><span class="lang-fr">Groupe de pratique IFSU</span><span class="lang-en">IFSU practice group</span></h4>
+              <p><span class="lang-fr">Studio IFSU · Ath<br>Gratuit à vie après le cycle de 10 séances · Horaire sur demande</span><span class="lang-en">Studio IFSU · Ath<br>Free for life after the 10-session cycle · Schedule on request</span></p>
+            </div>
+            <span class="agenda-badge badge-gratuit"><span class="lang-fr">Gratuit</span><span class="lang-en">Free</span></span>
+          </div>
+        </div>
+
+        <div class="momoyoga-embed">
+          <p><span class="lang-fr">Réservation en ligne via Momoyoga. Carte 10 cours ou séance individuelle.</span><span class="lang-en">Online booking via Momoyoga. 10-class card or individual session.</span></p>
+          <a href="https://www.momoyoga.com/ifsu/" target="_blank" rel="noopener" class="cta-btn cta-gold"><span class="lang-fr">Réserver sur Momoyoga →</span><span class="lang-en">Book on Momoyoga →</span></a>
+        </div>
+      </div>
+
+      <!-- ÉVÉNEMENTS À VENIR -->
+      <div>
+        <div class="agenda-title"><span class="lang-fr">Prochains événements</span><span class="lang-en">Upcoming events</span></div>
+
+        <div class="agenda-event">
+          <div class="agenda-event-date"><span class="lang-fr">Novembre 2026</span><span class="lang-en">November 2026</span></div>
+          <h4><span class="lang-fr">Retraite résidentielle · Viniyoga &amp; Méditation</span><span class="lang-en">Residential Retreat · Viniyoga &amp; Meditation</span></h4>
+          <p><span class="lang-fr">Koningsteen, Brabant flamand · 3 jours · 8 places · 380€ tout compris. Yoga matin &amp; soir, méditation, Yoga Nidra, Satsang, silence et nature.</span><span class="lang-en">Koningsteen, Flemish Brabant · 3 days · 8 spots · €380 all inclusive. Morning &amp; evening yoga, meditation, Yoga Nidra, Satsang, silence and nature.</span></p>
+          <a href="retraite.html" class="cta-btn cta-gold" style="margin-top:1rem; display:inline-block; font-size:0.72rem; padding:0.6rem 1.4rem;"><span class="lang-fr">Voir la retraite →</span><span class="lang-en">View the retreat →</span></a>
+        </div>
+
+        <div class="agenda-section" style="margin-top:2rem;">
+          <div class="agenda-title"><span class="lang-fr">Ateliers ponctuels – dates à annoncer</span><span class="lang-en">One-off workshops – dates to be announced</span></div>
+
+          <div class="agenda-row" style="cursor:default; opacity:0.7;">
+            <div class="agenda-day"><span class="lang-fr">À venir</span><span class="lang-en">Upcoming</span></div>
+            <div class="agenda-info">
+              <h4>Yoga Nidra</h4>
+              <p><span class="lang-fr">Studio IFSU · 3h · 35€ · date annoncée sur Facebook</span><span class="lang-en">Studio IFSU · 3h · €35 · date announced on Facebook</span></p>
+            </div>
+            <span class="agenda-badge badge-atelier"><span class="lang-fr">Atelier</span><span class="lang-en">Workshop</span></span>
+          </div>
+
+          <div class="agenda-row" style="cursor:default; opacity:0.7;">
+            <div class="agenda-day"><span class="lang-fr">À venir</span><span class="lang-en">Upcoming</span></div>
+            <div class="agenda-info">
+              <h4>Pranayama</h4>
+              <p><span class="lang-fr">Studio IFSU · 3h · 35€ · date annoncée sur Facebook</span><span class="lang-en">Studio IFSU · 3h · €35 · date announced on Facebook</span></p>
+            </div>
+            <span class="agenda-badge badge-atelier"><span class="lang-fr">Atelier</span><span class="lang-en">Workshop</span></span>
+          </div>
+
+          <div class="agenda-row" style="cursor:default; opacity:0.7;">
+            <div class="agenda-day"><span class="lang-fr">À venir</span><span class="lang-en">Upcoming</span></div>
+            <div class="agenda-info">
+              <h4><span class="lang-fr">Introduction méditation védique</span><span class="lang-en">Intro Vedic meditation</span></h4>
+              <p><span class="lang-fr">Studio IFSU · 4h · 45€ · date annoncée sur Facebook</span><span class="lang-en">Studio IFSU · 4h · €45 · date announced on Facebook</span></p>
+            </div>
+            <span class="agenda-badge badge-meditation"><span class="lang-fr">Méditation</span><span class="lang-en">Meditation</span></span>
+          </div>
+        </div>
+
+        <div class="truth-box-light" style="margin-top:1.5rem;">
+          <div class="truth-label"><span class="lang-fr">Restez informé·e</span><span class="lang-en">Stay informed</span></div>
+          <p class="truth-text-light" style="font-size:0.9rem; font-style:normal; font-family:'DM Sans',sans-serif;">
+            <span class="lang-fr">Les dates des ateliers sont annoncées sur la page Facebook et par email. Contactez-moi pour être prévenu·e en priorité.</span>
+            <span class="lang-en">Workshop dates are announced on the Facebook page and by email. Contact me to be notified as a priority.</span>
+          </p>
+          <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:1rem;">
+            <a href="https://www.facebook.com/IFSU.Yoga.Meditation.Ath" target="_blank" rel="noopener" class="cta-btn cta-gold" style="font-size:0.72rem; padding:0.55rem 1.2rem;">Facebook →</a>
+            <a href="https://wa.me/32477091803" class="cta-btn cta-terracotta" style="font-size:0.72rem; padding:0.55rem 1.2rem;">WhatsApp →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-main">
+    <div class="footer-logo">IFSU Équilibre <span>·</span> Marjorie M.</div>
+    <div class="footer-links">
+      <a href="yoga.html"><span class="lang-fr">Yoga</span><span class="lang-en">Yoga</span></a>
+      <a href="meditation.html"><span class="lang-fr">Méditation</span><span class="lang-en">Meditation</span></a>
+      <a href="retraite.html"><span class="lang-fr">Retraite</span><span class="lang-en">Retreat</span></a>
+      <a href="ateliers.html"><span class="lang-fr">Ateliers</span><span class="lang-en">Workshops</span></a>
+      <a href="entreprises.html"><span class="lang-fr">Entreprises</span><span class="lang-en">Companies</span></a>
+      <a href="qui-suis-je.html"><span class="lang-fr">À propos</span><span class="lang-en">About</span></a>
+      <a href="agenda.html">Agenda</a>
+      <a href="https://ifsu.online">ifsu.online</a>
+    </div>
+  </div>
+  <div class="footer-nap">
+    <div class="footer-nap-item"><strong>IFSU Équilibre – Marjorie Mathieu</strong><span class="lang-fr">Viniyoga &amp; Méditation Védique à Ath</span><span class="lang-en">Viniyoga &amp; Vedic Meditation in Ath</span></div>
+    <div class="footer-nap-item"><strong>Studio IFSU</strong>Rue des Hauts-Degrés 20, 7800 Ath</div>
+    <div class="footer-nap-item"><strong>Email</strong><a href="mailto:ifsu@etik.com">ifsu@etik.com</a></div>
+    <div class="footer-nap-item"><strong><span class="lang-fr">Téléphone</span><span class="lang-en">Phone</span></strong><a href="tel:+32477091803">0477/09.18.03</a></div>
+  </div>
+</footer>
+<script src="shared.js"></script>
+</body>
+</html>
