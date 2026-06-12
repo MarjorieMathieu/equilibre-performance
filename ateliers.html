@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ateliers & Événements — IFSU Équilibre · Ath</title>
+  <meta name="description" content="Ateliers yoga, chanting et méditation à Ath. Formats 3h ponctuels et causeries mensuelles gratuites. IFSU Équilibre, Hainaut.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hero-page {
+      background: var(--ardoise-dark);
+      padding: 6rem 2rem 4.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-page::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(to right, var(--terracotta), var(--gold), transparent);
+    }
+    .hero-page-inner { max-width: var(--max-w); margin: 0 auto; }
+    .hero-page-label {
+      font-family: var(--font-corps);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 1rem;
+    }
+    .hero-page-title {
+      font-family: var(--font-titre);
+      font-size: clamp(2.4rem, 6vw, 3.8rem);
+      font-weight: 300;
+      color: var(--lin);
+      line-height: 1.1;
+      margin-bottom: 1.25rem;
+    }
+    .hero-page-sub {
+      font-family: var(--font-titre);
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--gris-bleuté);
+      font-weight: 300;
+    }
+
+    /* Atelier principal — layout 2 colonnes */
+    .atelier-layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+    @media (max-width: 680px) {
+      .atelier-layout { grid-template-columns: 1fr; gap: 2rem; }
+    }
+
+    /* Structure 3h — ligne de temps */
+    .timeline {
+      margin-top: 2rem;
+      position: relative;
+      padding-left: 1.5rem;
+      border-left: 1px solid var(--lin-deep);
+    }
+    .tl-item {
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    .tl-item::before {
+      content: '';
+      position: absolute;
+      left: -1.5rem;
+      top: 0.4rem;
+      width: 8px; height: 8px;
+      background: var(--gold);
+      border-radius: 50%;
+      transform: translateX(-4px);
+    }
+    .tl-temps {
+      font-family: var(--font-corps);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 0.3rem;
+    }
+    .tl-titre {
+      font-family: var(--font-titre);
+      font-size: 1.15rem;
+      font-weight: 400;
+      color: var(--ardoise-dark);
+      margin-bottom: 0.3rem;
+    }
+    .tl-text {
+      font-size: 0.88rem;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    /* Causerie */
+    .causerie-bloc {
+      background: var(--ardoise-dark);
+      padding: 3rem 2.5rem;
+      color: var(--lin);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    @media (max-width: 620px) {
+      .causerie-bloc { grid-template-columns: 1fr; gap: 2rem; }
+    }
+    .causerie-titre {
+      font-family: var(--font-titre);
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--lin);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    .causerie-text {
+      font-size: 0.9rem;
+      color: rgba(247,243,238,0.8);
+      line-height: 1.75;
+      margin-bottom: 0.75rem;
+    }
+    .causerie-programme {
+      border-left: 1px solid rgba(201,168,76,0.3);
+      padding-left: 1.5rem;
+    }
+    .causerie-prog-item {
+      padding: 0.6rem 0;
+      font-size: 0.88rem;
+      color: rgba(247,243,238,0.75);
+      border-bottom: 1px solid rgba(247,243,238,0.08);
+      line-height: 1.5;
+    }
+    .causerie-prog-item:last-child { border-bottom: none; }
+    .causerie-prog-label {
+      font-family: var(--font-corps);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 0.15rem;
+    }
+
+    /* Prochain atelier — badge mise en avant */
+    .prochain-badge {
+      background: var(--terracotta);
+      color: var(--lin);
+      display: inline-block;
+      font-family: var(--font-corps);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body class="page-body">
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">
+      <svg width="36" height="36" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="28" cy="28" r="26" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.9"/>
+        <circle cx="28" cy="28" r="21" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.8"/>
+        <circle cx="28" cy="28" r="16" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.7"/>
+        <circle cx="28" cy="28" r="11" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.6"/>
+        <circle cx="28" cy="28" r="6"  fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.5"/>
+        <circle cx="28"   cy="2"    r="2.2" fill="#C9A84C" opacity="0.75"/>
+        <circle cx="47.5" cy="9.5"  r="2.2" fill="#C9A84C" opacity="0.75"/>
+        <circle cx="54"   cy="28"   r="2.2" fill="#C9A84C" opacity="0.75"/>
+        <circle cx="47.5" cy="46.5" r="2.2" fill="#C9A84C" opacity="0.75"/>
+        <circle cx="28"   cy="54"   r="2.2" fill="#C9A84C" opacity="0.75"/>
+        <circle cx="8.5"  cy="46.5" r="2.2" fill="#C9A84C" opacity="0.75"/>
+        <circle cx="2"    cy="28"   r="2.2" fill="#C9A84C" opacity="0.75"/>
+        <circle cx="8.5"  cy="9.5"  r="2.2" fill="#C9A84C" opacity="0.75"/>
+        <circle cx="38"   cy="3.5"  r="2.2" fill="#C9A84C" opacity="0.55"/>
+        <defs>
+          <linearGradient id="fna" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0%" stop-color="#C4714A"/>
+            <stop offset="100%" stop-color="#F0EAE0"/>
+          </linearGradient>
+        </defs>
+        <ellipse cx="28" cy="26" rx="3" ry="5" fill="url(#fna)" opacity="0.9"/>
+      </svg>
+      <div class="nav-logo-text">
+        IFSU Équilibre
+        <span>Ath · Hainaut</span>
+      </div>
+    </a>
+    <button class="nav-burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="yoga.html">Yoga</a></li>
+      <li><a href="meditation.html">Méditation</a></li>
+      <li><a href="ateliers.html" class="active">Ateliers</a></li>
+      <li><a href="retraite.html">Retraite</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO PAGE -->
+  <header class="hero-page">
+    <div class="hero-page-inner">
+      <p class="hero-page-label">Ateliers & Événements</p>
+      <h1 class="hero-page-title">Trois heures.<br>Yoga, chanting, méditation.</h1>
+      <p class="hero-page-sub">Des formats ponctuels pour aller plus loin — sans s'engager sur la durée</p>
+    </div>
+  </header>
+
+  <!-- PROCHAIN ATELIER — SOLSTICE -->
+  <section class="section">
+    <div class="section-inner">
+      <span class="prochain-badge">Prochain atelier</span>
+      <p class="section-label">Atelier Solstice</p>
+      <h2 class="section-title">21 juin 2026</h2>
+
+      <div class="atelier-layout">
+        <div>
+          <p class="section-text">
+            Un atelier de 3 heures autour du solstice d'été. Le corps qui se pose, le souffle qui fait le lien, le silence qui arrive. Dans l'ordre. Sans précipiter.
+          </p>
+          <p class="section-text">
+            Yoga adapté, chanting AUM et mantras de tradition védique, méditation guidée. Débutants bienvenus — aucun prérequis, aucune posture à maîtriser avant d'arriver.
+          </p>
+
+          <div class="divider"></div>
+
+          <h3 style="font-family:var(--font-corps);font-size:0.72rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--ardoise);margin-bottom:1.5rem;">Les 3 heures</h3>
+
+          <div class="timeline">
+            <div class="tl-item">
+              <p class="tl-temps">Partie 1 · 75 min</p>
+              <h4 class="tl-titre">Yoga, Souffle & Introduction au Son</h4>
+              <p class="tl-text">Ancrer le corps, installer la présence. Séquence Viniyoga adaptée, souffle conduit, ouverture progressive vers le son via le AUM.</p>
+            </div>
+            <div class="tl-item">
+              <p class="tl-temps">Pause · 15 min</p>
+              <h4 class="tl-titre">Tisane & échange informel</h4>
+              <p class="tl-text">Une pause réelle. Pas une transition. Du temps pour souffler, poser des questions, laisser le corps intégrer.</p>
+            </div>
+            <div class="tl-item" style="margin-bottom:0;">
+              <p class="tl-temps">Partie 2 · 75 min</p>
+              <h4 class="tl-titre">Chanting approfondi & Méditation</h4>
+              <p class="tl-text">Transmission du chanting, pratique méditative guidée, clôture en Savasana. On ne sort pas d'ici sur une civière — mais on sort différemment qu'on est entré.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="info-bloc">
+            <p class="info-bloc-title">Informations pratiques</p>
+            <div class="info-ligne">
+              <span class="info-ligne-label">Date</span>
+              <span class="info-ligne-valeur">21 juin 2026</span>
+            </div>
+            <div class="info-ligne">
+              <span class="info-ligne-label">Durée</span>
+              <span class="info-ligne-valeur">3 heures</span>
+            </div>
+            <div class="info-ligne">
+              <span class="info-ligne-label">Places</span>
+              <span class="info-ligne-valeur">max 12</span>
+            </div>
+            <div class="info-ligne">
+              <span class="info-ligne-label">Tarif</span>
+              <span class="info-ligne-valeur">55 €</span>
+            </div>
+            <div class="info-ligne">
+              <span class="info-ligne-label">Early bird</span>
+              <span class="info-ligne-valeur">45 € · 48h avant</span>
+            </div>
+            <div class="info-ligne">
+              <span class="info-ligne-label">Réservation</span>
+              <span class="info-ligne-valeur"><a href="https://momoyoga.com/ifsu" target="_blank" style="color:var(--ardoise);">momoyoga.com/ifsu</a></span>
+            </div>
+          </div>
+
+          <div style="margin-top:1.5rem;padding:1.25rem;background:var(--lin-deep);font-size:0.85rem;color:#555;line-height:1.7;">
+            Tapis fournis si besoin. Tenue confortable. Tisane comprise. Aucune expérience requise — ni en yoga, ni en chanting, ni en méditation.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ATELIER FORMAT GÉNÉRAL -->
+  <section class="section section-alt">
+    <div class="section-inner">
+      <p class="section-label">Format récurrent</p>
+      <h2 class="section-title">Les ateliers 3h</h2>
+      <p class="section-text">Le format de base. Disponible sur l'année, dates annoncées au fil des sessions.</p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem;">
+        @media(max-width:540px){div{grid-template-columns:1fr !important;}}
+        <div class="info-bloc">
+          <p class="info-bloc-title">Tarifs</p>
+          <div class="info-ligne">
+            <span class="info-ligne-label">Tarif standard</span>
+            <span class="info-ligne-valeur">55 €</span>
+          </div>
+          <div class="info-ligne">
+            <span class="info-ligne-label">Early bird (48h avant)</span>
+            <span class="info-ligne-valeur">45 €</span>
+          </div>
+          <div class="info-ligne">
+            <span class="info-ligne-label">Série de 3 ateliers</span>
+            <span class="info-ligne-valeur">135 €</span>
+          </div>
+        </div>
+
+        <div class="info-bloc">
+          <p class="info-bloc-title">Modalités</p>
+          <div class="info-ligne">
+            <span class="info-ligne-label">Paiement</span>
+            <span class="info-ligne-valeur">Virement, Payconiq, espèces</span>
+          </div>
+          <div class="info-ligne">
+            <span class="info-ligne-label">Annulation</span>
+            <span class="info-ligne-valeur">Gratuite jusqu'à 48h avant</span>
+          </div>
+          <div class="info-ligne">
+            <span class="info-ligne-label">Prérequis</span>
+            <span class="info-ligne-valeur">Aucun</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAUSERIE & MÉDITATION -->
+  <section class="section" style="padding:0;">
+    <div class="causerie-bloc">
+      <div>
+        <p style="font-family:var(--font-corps);font-size:0.7rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;">Soirée mensuelle</p>
+        <h2 class="causerie-titre">Causerie<br>& Méditation</h2>
+        <p class="causerie-text">
+          Une soirée de découverte, gratuite, une fois par mois. Maximum 8 participants.
+        </p>
+        <p class="causerie-text">
+          On regarde ensemble un enregistrement de Gururaj Ananda Yogi. On discute — librement, sans programme préétabli. On termine par 30 minutes de méditation guidée.
+        </p>
+        <p class="causerie-text">
+          Pas d'obligation de revenir. Pas de suite à signer. Juste une porte ouverte.
+        </p>
+        <div style="margin-top:1.5rem;">
+          <a href="mailto:ifsu@etik.com" class="btn btn-light">Réserver une place</a>
+        </div>
+      </div>
+
+      <div class="causerie-programme">
+        <div class="causerie-prog-item">
+          <span class="causerie-prog-label">Fréquence</span>
+          Mensuelle
+        </div>
+        <div class="causerie-prog-item">
+          <span class="causerie-prog-label">Places</span>
+          Maximum 8
+        </div>
+        <div class="causerie-prog-item">
+          <span class="causerie-prog-label">Tarif</span>
+          Gratuit
+        </div>
+        <div class="causerie-prog-item">
+          <span class="causerie-prog-label">Programme</span>
+          Vidéo Gururaj · Discussion libre · 30 min méditation guidée
+        </div>
+        <div class="causerie-prog-item">
+          <span class="causerie-prog-label">Réservation</span>
+          ifsu@etik.com · 0477 09 18 03
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section text-center">
+    <div class="section-inner">
+      <h2 class="section-title">Tu veux être prévenu des prochains ateliers ?</h2>
+      <p class="section-text" style="max-width:480px;margin:0 auto 2rem;">
+        Envoie un message — j'ajoute ton nom à la liste. Pas de newsletter automatique, pas de spam. Juste un message quand une date est confirmée.
+      </p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="mailto:ifsu@etik.com" class="btn btn-terracotta">ifsu@etik.com</a>
+        <a href="https://momoyoga.com/ifsu" target="_blank" class="btn btn-ardoise">Réserver en ligne</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <svg class="footer-emblem" width="52" height="52" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="28" cy="28" r="26" fill="none" stroke="#C9A84C" stroke-width="0.7" opacity="0.7"/>
+      <circle cx="28" cy="28" r="21" fill="none" stroke="#C9A84C" stroke-width="0.7" opacity="0.6"/>
+      <circle cx="28" cy="28" r="16" fill="none" stroke="#C9A84C" stroke-width="0.7" opacity="0.5"/>
+      <circle cx="28" cy="28" r="11" fill="none" stroke="#C9A84C" stroke-width="0.7" opacity="0.4"/>
+      <circle cx="28" cy="28" r="6"  fill="none" stroke="#C9A84C" stroke-width="0.7" opacity="0.3"/>
+      <circle cx="28"   cy="2"    r="2" fill="#C9A84C" opacity="0.6"/>
+      <circle cx="47.5" cy="9.5"  r="2" fill="#C9A84C" opacity="0.6"/>
+      <circle cx="54"   cy="28"   r="2" fill="#C9A84C" opacity="0.6"/>
+      <circle cx="47.5" cy="46.5" r="2" fill="#C9A84C" opacity="0.6"/>
+      <circle cx="28"   cy="54"   r="2" fill="#C9A84C" opacity="0.6"/>
+      <circle cx="8.5"  cy="46.5" r="2" fill="#C9A84C" opacity="0.6"/>
+      <circle cx="2"    cy="28"   r="2" fill="#C9A84C" opacity="0.6"/>
+      <circle cx="8.5"  cy="9.5"  r="2" fill="#C9A84C" opacity="0.6"/>
+      <circle cx="38"   cy="3.5"  r="2" fill="#C9A84C" opacity="0.4"/>
+      <defs>
+        <linearGradient id="ffa" x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0%" stop-color="#C4714A"/>
+          <stop offset="100%" stop-color="#F0EAE0"/>
+        </linearGradient>
+      </defs>
+      <ellipse cx="28" cy="26" rx="3" ry="5" fill="url(#ffa)" opacity="0.8"/>
+    </svg>
+    <p class="footer-name">IFSU Équilibre</p>
+    <p class="footer-tagline">Marjorie Mathieu · Ath, Hainaut</p>
+    <div class="footer-divider"></div>
+    <div class="footer-contact">
+      <a href="mailto:ifsu@etik.com">ifsu@etik.com</a><br>
+      <a href="tel:+32477091803">0477 09 18 03</a>
+    </div>
+    <div class="footer-social">
+      <a href="https://facebook.com/IFSU.Yoga.Meditation.Ath" target="_blank">Facebook</a>
+      <a href="https://mastodon.social/@IFSUYogameditation" target="_blank">Mastodon</a>
+    </div>
+    <p class="footer-legal">© 2026 IFSU Équilibre · Production Associée via Smart · <a href="https://ifsu-equilibre.be" style="color:inherit;">ifsu-equilibre.be</a></p>
+  </footer>
+
+  <script>
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('nav-links');
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

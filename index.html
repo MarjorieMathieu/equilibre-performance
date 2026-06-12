@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IFSU Équilibre — Yoga Viniyoga & Méditation Védique · Ath</title>
+  <meta name="description" content="Yoga Viniyoga et méditation védique IFSU à Ath, Hainaut. Enseignement de Marjorie Mathieu, co-responsable IFSU Belgique.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Hero accueil — plus généreux */
+    .hero-accueil {
+      background: var(--ardoise-dark);
+      padding: 8rem 2rem 7rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-accueil::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 55% 35%, rgba(201,168,76,0.07) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    /* Cartes d'entrée — les 4 univers */
+    .univers-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0;
+    }
+    @media (max-width: 680px) {
+      .univers-grid { grid-template-columns: 1fr; }
+    }
+
+    .univers-card {
+      padding: 3rem 2.5rem;
+      border: 1px solid var(--lin-deep);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.25s;
+      position: relative;
+    }
+    .univers-card:hover { background: var(--blanc); }
+
+    .univers-card-label {
+      font-family: var(--font-corps);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+    }
+
+    .univers-card-title {
+      font-family: var(--font-titre);
+      font-size: 1.7rem;
+      font-weight: 300;
+      color: var(--ardoise-dark);
+      line-height: 1.2;
+    }
+
+    .univers-card-text {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.75;
+      flex: 1;
+    }
+
+    .univers-card-link {
+      font-family: var(--font-corps);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ardoise);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+      transition: color 0.2s;
+    }
+    .univers-card:hover .univers-card-link { color: var(--terracotta); }
+    .univers-card-link::after { content: '→'; }
+
+    /* Accent top sur la première carte */
+    .univers-card:nth-child(1) { border-top: 2px solid var(--terracotta); }
+    .univers-card:nth-child(2) { border-top: 2px solid var(--gold); }
+    .univers-card:nth-child(3) { border-top: 2px solid var(--ardoise); }
+    .univers-card:nth-child(4) { border-top: 2px solid var(--gris-bleuté); }
+
+    /* Section contact rapide */
+    .contact-bande {
+      background: var(--ardoise);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .contact-bande p {
+      font-size: 0.9rem;
+      color: rgba(247,243,238,0.8);
+      margin-bottom: 0.3rem;
+    }
+    .contact-bande a {
+      color: var(--lin);
+      font-weight: 400;
+    }
+    .contact-bande-title {
+      font-family: var(--font-titre);
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: var(--lin);
+      margin-bottom: 1.25rem;
+    }
+  </style>
+</head>
+<body class="page-body">
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">
+      <svg width="36" height="36" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="28" cy="28" r="26" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.9"/>
+        <circle cx="28" cy="28" r="21" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.8"/>
+        <circle cx="28" cy="28" r="16" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.7"/>
+        <circle cx="28" cy="28" r="11" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.6"/>
+        <circle cx="28" cy="28" r="6"  fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.5"/>
+        <circle cx="28"   cy="2"    r="2.2" fill="#C9A84C" opacity="0.75"/>
+        <circle cx="47.5" cy="9.5"  r="2.2" fill="#C9A84C" opacity="0.75"/>
+        <circle cx="54"   cy="28"   r="2.2" fill="#C9A84C" opacity="0.75"/>
+        <circle cx="47.5" cy="46.5" r="2.2" fill="#C9A84C" opacity="0.75"/>
+        <circle cx="28"   cy="54"   r="2.2" fill="#C9A84C" opacity="0.75"/>
+        <circle cx="8.5"  cy="46.5" r="2.2" fill="#C9A84C" opacity="0.75"/>
+        <circle cx="2"    cy="28"   r="2.2" fill="#C9A84C" opacity="0.75"/>
+        <circle cx="8.5"  cy="9.5"  r="2.2" fill="#C9A84C" opacity="0.75"/>
+        <circle cx="38"   cy="3.5"  r="2.2" fill="#C9A84C" opacity="0.55"/>
+        <defs>
+          <linearGradient id="f0" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0%" stop-color="#C4714A"/>
+            <stop offset="100%" stop-color="#F0EAE0"/>
+          </linearGradient>
+        </defs>
+        <ellipse cx="28" cy="26" rx="3" ry="5" fill="url(#f0)" opacity="0.9"/>
+      </svg>
+      <div class="nav-logo-text">
+        IFSU Équilibre
+        <span>Ath · Hainaut</span>
+      </div>
+    </a>
+    <button class="nav-burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" class="active">Accueil</a></li>
+      <li><a href="yoga.html">Yoga</a></li>
+      <li><a href="meditation.html">Méditation</a></li>
+      <li><a href="ateliers.html">Ateliers</a></li>
+      <li><a href="retraite.html">Retraite</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-accueil">
+    <svg class="hero-emblem" width="80" height="80" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="28" cy="28" r="26" fill="none" stroke="#C9A84C" stroke-width="0.7" opacity="0.9"/>
+      <circle cx="28" cy="28" r="21" fill="none" stroke="#C9A84C" stroke-width="0.7" opacity="0.8"/>
+      <circle cx="28" cy="28" r="16" fill="none" stroke="#C9A84C" stroke-width="0.7" opacity="0.7"/>
+      <circle cx="28" cy="28" r="11" fill="none" stroke="#C9A84C" stroke-width="0.7" opacity="0.6"/>
+      <circle cx="28" cy="28" r="6"  fill="none" stroke="#C9A84C" stroke-width="0.7" opacity="0.5"/>
+      <circle cx="28"   cy="2"    r="2.2" fill="#C9A84C" opacity="0.75"/>
+      <circle cx="47.5" cy="9.5"  r="2.2" fill="#C9A84C" opacity="0.75"/>
+      <circle cx="54"   cy="28"   r="2.2" fill="#C9A84C" opacity="0.75"/>
+      <circle cx="47.5" cy="46.5" r="2.2" fill="#C9A84C" opacity="0.75"/>
+      <circle cx="28"   cy="54"   r="2.2" fill="#C9A84C" opacity="0.75"/>
+      <circle cx="8.5"  cy="46.5" r="2.2" fill="#C9A84C" opacity="0.75"/>
+      <circle cx="2"    cy="28"   r="2.2" fill="#C9A84C" opacity="0.75"/>
+      <circle cx="8.5"  cy="9.5"  r="2.2" fill="#C9A84C" opacity="0.75"/>
+      <circle cx="38"   cy="3.5"  r="2.2" fill="#C9A84C" opacity="0.55"/>
+      <defs>
+        <linearGradient id="fh" x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0%" stop-color="#C4714A"/>
+          <stop offset="100%" stop-color="#F0EAE0"/>
+        </linearGradient>
+      </defs>
+      <ellipse cx="28" cy="26" rx="3" ry="5" fill="url(#fh)" opacity="0.9"/>
+    </svg>
+    <h1 class="hero-title">IFSU Équilibre</h1>
+    <p class="hero-sub">Yoga Viniyoga &amp; Méditation Védique IFSU</p>
+    <p class="hero-tagline">Ath · Hainaut · Belgique</p>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section">
+    <div class="section-inner text-center">
+      <p class="section-label">L'essentiel</p>
+      <h2 class="section-title">Ce qui se passe ici</h2>
+      <p class="section-text" style="max-width:600px;margin:0 auto 1rem;">
+        Le corps qui retrouve son aise. L'esprit qui ralentit sans qu'on lui force la main. Le silence qui arrive — parfois vite, souvent progressivement, toujours de façon différente selon les jours.
+      </p>
+      <p class="section-text" style="max-width:600px;margin:0 auto;">
+        Deux pratiques distinctes, deux lignées précises. Pas de fusion, pas de menu découverte. Chacune a ses fondements, ses exigences, ses résultats.
+      </p>
+      <div class="divider" style="margin:2.5rem auto;"></div>
+    </div>
+  </section>
+
+  <!-- 4 UNIVERS -->
+  <section class="section" style="padding-top:0;padding-bottom:0;">
+    <div class="section-inner-large">
+      <div class="univers-grid">
+
+        <a href="yoga.html" class="univers-card">
+          <span class="univers-card-label">Yoga Viniyoga</span>
+          <h2 class="univers-card-title">Le corps qui bouge<br>comme il peut</h2>
+          <p class="univers-card-text">
+            Séances de 90 minutes, petit groupe ou individuel. La posture s'adapte à toi — pas l'inverse. Lignée Krishnamacharya, enseignement depuis 2014. Cours à Ath, plusieurs créneaux en semaine et le samedi.
+          </p>
+          <span class="univers-card-link">Voir les horaires</span>
+        </a>
+
+        <a href="meditation.html" class="univers-card">
+          <span class="univers-card-label">Méditation Védique IFSU</span>
+          <h2 class="univers-card-title">Une technique<br>prescrite pour toi</h2>
+          <p class="univers-card-text">
+            Pas de la pleine conscience générique. Une pratique individuelle, avec une technique choisie selon ta nature. Fondée en 1975 par Gururaj Ananda Yogi. Session découverte gratuite, sur RDV.
+          </p>
+          <span class="univers-card-link">Découvrir la méthode</span>
+        </a>
+
+        <a href="ateliers.html" class="univers-card">
+          <span class="univers-card-label">Ateliers & Événements</span>
+          <h2 class="univers-card-title">Trois heures<br>pour aller plus loin</h2>
+          <p class="univers-card-text">
+            Ateliers yoga + chanting + méditation, 3h en immersion. Causeries mensuelles gratuites. Des formats ponctuels pour ceux qui veulent explorer sans s'engager sur la durée.
+          </p>
+          <span class="univers-card-link">Voir le programme</span>
+        </a>
+
+        <a href="retraite.html" class="univers-card">
+          <span class="univers-card-label">Retraite · Novembre 2026</span>
+          <h2 class="univers-card-title">Cinq jours<br>à Koningsteen</h2>
+          <p class="univers-card-text">
+            23–27 novembre 2026. Co-animée avec Breeyana Borum. Logement et repas inclus. Maximum 20 participants. Une parenthèse réelle — pas un weekend spa rebrandé yoga.
+          </p>
+          <span class="univers-card-link">En savoir plus</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT RAPIDE -->
+  <section class="contact-bande" style="margin-top:5rem;">
+    <h2 class="contact-bande-title">Une question ? Un doute ?</h2>
+    <p>Écris à <a href="mailto:ifsu@etik.com">ifsu@etik.com</a></p>
+    <p>Ou par WhatsApp au <a href="tel:+32477091803">0477 09 18 03</a></p>
+    <p style="margin-top:1rem;font-size:0.82rem;color:rgba(247,243,238,0.5);">
+      Réservations via <a href="https://momoyoga.com/ifsu" target="_blank" style="color:rgba(247,243,238,0.6);">momoyoga.com/ifsu</a> (mercredi et samedi)
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <svg class="footer-emblem" width="52" height="52" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="28" cy="28" r="26" fill="none" stroke="#C9A84C" stroke-width="0.7" opacity="0.7"/>
+      <circle cx="28" cy="28" r="21" fill="none" stroke="#C9A84C" stroke-width="0.7" opacity="0.6"/>
+      <circle cx="28" cy="28" r="16" fill="none" stroke="#C9A84C" stroke-width="0.7" opacity="0.5"/>
+      <circle cx="28" cy="28" r="11" fill="none" stroke="#C9A84C" stroke-width="0.7" opacity="0.4"/>
+      <circle cx="28" cy="28" r="6"  fill="none" stroke="#C9A84C" stroke-width="0.7" opacity="0.3"/>
+      <circle cx="28"   cy="2"    r="2" fill="#C9A84C" opacity="0.6"/>
+      <circle cx="47.5" cy="9.5"  r="2" fill="#C9A84C" opacity="0.6"/>
+      <circle cx="54"   cy="28"   r="2" fill="#C9A84C" opacity="0.6"/>
+      <circle cx="47.5" cy="46.5" r="2" fill="#C9A84C" opacity="0.6"/>
+      <circle cx="28"   cy="54"   r="2" fill="#C9A84C" opacity="0.6"/>
+      <circle cx="8.5"  cy="46.5" r="2" fill="#C9A84C" opacity="0.6"/>
+      <circle cx="2"    cy="28"   r="2" fill="#C9A84C" opacity="0.6"/>
+      <circle cx="8.5"  cy="9.5"  r="2" fill="#C9A84C" opacity="0.6"/>
+      <circle cx="38"   cy="3.5"  r="2" fill="#C9A84C" opacity="0.4"/>
+      <defs>
+        <linearGradient id="ff" x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0%" stop-color="#C4714A"/>
+          <stop offset="100%" stop-color="#F0EAE0"/>
+        </linearGradient>
+      </defs>
+      <ellipse cx="28" cy="26" rx="3" ry="5" fill="url(#ff)" opacity="0.8"/>
+    </svg>
+    <p class="footer-name">IFSU Équilibre</p>
+    <p class="footer-tagline">Marjorie Mathieu · Ath, Hainaut</p>
+    <div class="footer-divider"></div>
+    <div class="footer-contact">
+      <a href="mailto:ifsu@etik.com">ifsu@etik.com</a><br>
+      <a href="tel:+32477091803">0477 09 18 03</a>
+    </div>
+    <div class="footer-social">
+      <a href="https://facebook.com/IFSU.Yoga.Meditation.Ath" target="_blank">Facebook</a>
+      <a href="https://mastodon.social/@IFSUYogameditation" target="_blank">Mastodon</a>
+    </div>
+    <p class="footer-legal">© 2026 IFSU Équilibre · Production Associée via Smart · <a href="https://ifsu-equilibre.be" style="color:inherit;">ifsu-equilibre.be</a></p>
+  </footer>
+
+  <script>
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('nav-links');
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

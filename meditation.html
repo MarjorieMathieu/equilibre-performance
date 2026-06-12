@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Méditation Védique IFSU — IFSU Équilibre · Ath</title>
+  <meta name="description" content="Méditation Védique IFSU à Ath, Hainaut. Path of Unfoldment, fondé en 1975 par Gururaj Ananda Yogi. Session découverte gratuite, sur RDV.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hero-page {
+      background: var(--ardoise-dark);
+      padding: 6rem 2rem 4.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-page::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(to right, var(--gold), transparent);
+    }
+    .hero-page-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .hero-page-label {
+      font-family: var(--font-corps);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .hero-page-title {
+      font-family: var(--font-titre);
+      font-size: clamp(2.4rem, 6vw, 3.8rem);
+      font-weight: 300;
+      color: var(--lin);
+      line-height: 1.1;
+      margin-bottom: 1.25rem;
+    }
+    .hero-page-sub {
+      font-family: var(--font-titre);
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--gris-bleuté);
+      font-weight: 300;
+    }
+
+    /* Techniques — grille 2×2 */
+    .techniques-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    @media (max-width: 580px) {
+      .techniques-grid { grid-template-columns: 1fr; }
+    }
+    .technique-card {
+      background: var(--ardoise-dark);
+      padding: 1.75rem;
+      color: var(--lin);
+      position: relative;
+      overflow: hidden;
+    }
+    .technique-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 2px; height: 100%;
+      background: var(--gold);
+    }
+    .technique-nom {
+      font-family: var(--font-titre);
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--lin);
+      margin-bottom: 0.5rem;
+    }
+    .technique-text {
+      font-size: 0.88rem;
+      color: rgba(247,243,238,0.75);
+      line-height: 1.7;
+    }
+    .technique-sanskrit {
+      font-family: var(--font-titre);
+      font-size: 0.78rem;
+      font-style: italic;
+      color: var(--gold);
+      margin-bottom: 0.4rem;
+    }
+
+    /* Parcours — étapes visuelles */
+    .parcours-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      margin-top: 2.5rem;
+      border: 1px solid var(--lin-deep);
+      background: var(--blanc);
+    }
+    @media (max-width: 620px) {
+      .parcours-steps { grid-template-columns: 1fr; }
+    }
+    .step {
+      padding: 2rem 1.75rem;
+      border-right: 1px solid var(--lin-deep);
+      position: relative;
+    }
+    .step:last-child { border-right: none; }
+    @media (max-width: 620px) {
+      .step { border-right: none; border-bottom: 1px solid var(--lin-deep); }
+      .step:last-child { border-bottom: none; }
+    }
+    .step-num {
+      font-family: var(--font-titre);
+      font-size: 2.5rem;
+      font-weight: 300;
+      color: var(--lin-deep);
+      line-height: 1;
+      margin-bottom: 0.75rem;
+    }
+    .step-titre {
+      font-family: var(--font-corps);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ardoise);
+      margin-bottom: 0.6rem;
+    }
+    .step-text {
+      font-size: 0.88rem;
+      color: #555;
+      line-height: 1.7;
+    }
+    .step-tarif {
+      margin-top: 0.75rem;
+      font-family: var(--font-corps);
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--terracotta);
+    }
+
+    /* Bloc Breeyana */
+    .breeyana-bloc {
+      background: var(--lin-deep);
+      padding: 2.5rem;
+      border-left: 3px solid var(--gold);
+      margin-top: 2.5rem;
+    }
+    .breeyana-nom {
+      font-family: var(--font-titre);
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--ardoise-dark);
+      margin-bottom: 0.25rem;
+    }
+    .breeyana-titre {
+      font-size: 0.78rem;
+      font-family: var(--font-corps);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gris-bleuté);
+      margin-bottom: 1rem;
+    }
+
+    /* FAQ rapide */
+    .faq-item {
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--lin-deep);
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q {
+      font-family: var(--font-corps);
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--ardoise-dark);
+      margin-bottom: 0.5rem;
+    }
+    .faq-a {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body class="page-body">
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">
+      <svg width="36" height="36" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="28" cy="28" r="26" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.9"/>
+        <circle cx="28" cy="28" r="21" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.8"/>
+        <circle cx="28" cy="28" r="16" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.7"/>
+        <circle cx="28" cy="28" r="11" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.6"/>
+        <circle cx="28" cy="28" r="6"  fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.5"/>
+        <circle cx="28"   cy="2"    r="2.2" fill="#C9A84C" opacity="0.75"/>
+        <circle cx="47.5" cy="9.5"  r="2.2" fill="#C9A84C" opacity="0.75"/>
+        <circle cx="54"   cy="28"   r="2.2" fill="#C9A84C" opacity="0.75"/>
+        <circle cx="47.5" cy="46.5" r="2.2" fill="#C9A84C" opacity="0.75"/>
+        <circle cx="28"   cy="54"   r="2.2" fill="#C9A84C" opacity="0.75"/>
+        <circle cx="8.5"  cy="46.5" r="2.2" fill="#C9A84C" opacity="0.75"/>
+        <circle cx="2"    cy="28"   r="2.2" fill="#C9A84C" opacity="0.75"/>
+        <circle cx="8.5"  cy="9.5"  r="2.2" fill="#C9A84C" opacity="0.75"/>
+        <circle cx="38"   cy="3.5"  r="2.2" fill="#C9A84C" opacity="0.55"/>
+        <defs>
+          <linearGradient id="fnm" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0%" stop-color="#C4714A"/>
+            <stop offset="100%" stop-color="#F0EAE0"/>
+          </linearGradient>
+        </defs>
+        <ellipse cx="28" cy="26" rx="3" ry="5" fill="url(#fnm)" opacity="0.9"/>
+      </svg>
+      <div class="nav-logo-text">
+        IFSU Équilibre
+        <span>Ath · Hainaut</span>
+      </div>
+    </a>
+    <button class="nav-burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="yoga.html">Yoga</a></li>
+      <li><a href="meditation.html" class="active">Méditation</a></li>
+      <li><a href="ateliers.html">Ateliers</a></li>
+      <li><a href="retraite.html">Retraite</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO PAGE -->
+  <header class="hero-page">
+    <div class="hero-page-inner">
+      <p class="hero-page-label">Méditation Védique IFSU</p>
+      <h1 class="hero-page-title">Une technique prescrite<br>pour toi, selon ta nature.</h1>
+      <p class="hero-page-sub">Path of Unfoldment · Fondé en 1975 · Présent dans 8 pays</p>
+    </div>
+  </header>
+
+  <!-- CE QUE C'EST / CE QUE CE N'EST PAS -->
+  <section class="section">
+    <div class="section-inner">
+      <p class="section-label">La méthode</p>
+      <h2 class="section-title">Pas de la pleine conscience.</h2>
+      <p class="section-text">
+        La méditation védique IFSU n'est pas une application de 5 minutes. Ce n'est pas de la mindfulness. Ce n'est pas une religion, ni une secte. Aucun changement de croyance ou de style de vie requis.
+      </p>
+      <p class="section-text">
+        C'est une pratique structurée, avec des techniques précises — prescrites individuellement selon qui tu es. L'IFSU part d'un principe : ton ADN est unique. Ta méditation devrait l'être aussi.
+      </p>
+
+      <div class="citation">
+        <p class="citation-text">On ne développe pas l'esprit. On le déploie — il existe déjà.</p>
+        <p class="citation-source">Philosophie Path of Unfoldment · Gururaj Ananda Yogi, 1975</p>
+      </div>
+
+      <h3 class="section-subtitle" style="margin-top:2.5rem;">Les quatre techniques</h3>
+      <p class="section-text">Chacune est prescrite individuellement — jamais en bloc, jamais au hasard.</p>
+
+      <div class="techniques-grid">
+        <div class="technique-card">
+          <p class="technique-sanskrit">Mantra</p>
+          <h3 class="technique-nom">Méditation par le son</h3>
+          <p class="technique-text">Un son intérieur, choisi pour toi. Pratiqué en silence, assis confortablement. Le point d'entrée du cycle pour la plupart des pratiquants.</p>
+        </div>
+        <div class="technique-card">
+          <p class="technique-sanskrit">Tratak</p>
+          <h3 class="technique-nom">Méditation par la flamme</h3>
+          <p class="technique-text">Concentration sur un point fixe — traditionnellement une flamme. Discipline du regard et de l'attention. Introduit progressivement dans le cycle.</p>
+        </div>
+        <div class="technique-card">
+          <p class="technique-sanskrit">Pranayama</p>
+          <h3 class="technique-nom">Méditation par le souffle</h3>
+          <p class="technique-text">Six cycles respiratoires structurés. Pas du yoga respiratoire — une technique méditative à part entière, ancrée dans la tradition védique.</p>
+        </div>
+        <div class="technique-card">
+          <p class="technique-sanskrit">Gurushakti</p>
+          <h3 class="technique-nom">Pratique de transmission</h3>
+          <p class="technique-text">Une technique spirituelle transmise dans son registre propre. Elle n'a pas de cadre scientifique applicable — et c'est assumé.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LE PARCOURS -->
+  <section class="section section-alt" id="parcours">
+    <div class="section-inner">
+      <p class="section-label">Comment ça se passe</p>
+      <h2 class="section-title">Le parcours IFSU</h2>
+      <p class="section-text">Trois étapes. Dans l'ordre. Pas de raccourci.</p>
+
+      <div class="parcours-steps">
+        <div class="step">
+          <p class="step-num">01</p>
+          <p class="step-titre">Session découverte</p>
+          <p class="step-text">Individuelle, sur rendez-vous. On se rencontre, on parle de la méthode, tu poses tes questions. Sans engagement.</p>
+          <p class="step-tarif">Gratuit</p>
+        </div>
+        <div class="step">
+          <p class="step-num">02</p>
+          <p class="step-titre">Cycle de 10 séances</p>
+          <p class="step-text">Séances individuelles. Ta technique est prescrite lors de la première séance. La pratique se développe progressivement — chaque séance ajoute une couche.</p>
+          <p class="step-tarif">250 € · ou 25 €/séance</p>
+        </div>
+        <div class="step">
+          <p class="step-num">03</p>
+          <p class="step-titre">Groupe hebdomadaire</p>
+          <p class="step-text">Accès gratuit à vie au groupe de pratique hebdomadaire, après validation du cycle complet. La communauté qui tient dans le temps.</p>
+          <p class="step-tarif">Gratuit à vie</p>
+        </div>
+      </div>
+
+      <div class="info-bloc" style="margin-top:2rem;">
+        <p class="info-bloc-title">Logistique</p>
+        <div class="info-ligne">
+          <span class="info-ligne-label">Session découverte</span>
+          <span class="info-ligne-valeur">Sur RDV · ifsu@etik.com</span>
+        </div>
+        <div class="info-ligne">
+          <span class="info-ligne-label">Contact WhatsApp</span>
+          <span class="info-ligne-valeur">0477 09 18 03</span>
+        </div>
+        <div class="info-ligne">
+          <span class="info-ligne-label">Lieu</span>
+          <span class="info-ligne-valeur">Chez IFSU · Ath-Centre</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BREEYANA -->
+  <section class="section">
+    <div class="section-inner">
+      <p class="section-label">L'équipe</p>
+      <h2 class="section-title">Breeyana Borum</h2>
+
+      <div class="breeyana-bloc">
+        <p class="breeyana-nom">Breeyana Borum</p>
+        <p class="breeyana-titre">Enseignante IFSU · FR / EN / DK · Belgique</p>
+        <p class="section-text" style="margin-bottom:0.8rem;">
+          Breeyana enseigne la méditation védique IFSU en Belgique depuis de nombreuses années. Trilingue français, anglais, danois. Établie en Belgique depuis longtemps.
+        </p>
+        <p class="section-text" style="margin-bottom:0;">
+          Elle a été personnellement invitée à enseigner en Belgique par Gururaj Ananda Yogi lui-même. C'est elle qui assure la transmission directe de la lignée sur notre territoire — et qui co-anime la retraite de novembre 2026.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- IFSU EN BREF -->
+  <section class="section section-alt">
+    <div class="section-inner">
+      <p class="section-label">IFSU</p>
+      <h2 class="section-title">En bref</h2>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+        <div>
+          <div class="info-ligne" style="border-bottom:1px solid var(--lin-deep);padding:0.75rem 0;">
+            <span class="info-ligne-label">Fondé en</span>
+            <span class="info-ligne-valeur">1975</span>
+          </div>
+          <div class="info-ligne" style="border-bottom:1px solid var(--lin-deep);padding:0.75rem 0;">
+            <span class="info-ligne-label">Par</span>
+            <span class="info-ligne-valeur">Gururaj Ananda Yogi</span>
+          </div>
+          <div class="info-ligne" style="border-bottom:1px solid var(--lin-deep);padding:0.75rem 0;">
+            <span class="info-ligne-label">Présent dans</span>
+            <span class="info-ligne-valeur">8 pays</span>
+          </div>
+          <div class="info-ligne" style="padding:0.75rem 0;">
+            <span class="info-ligne-label">Structure</span>
+            <span class="info-ligne-valeur">ASBL sans but lucratif</span>
+          </div>
+        </div>
+        <div>
+          <p class="section-text">
+            Belgique active depuis 1989, sous l'impulsion de Breeyana Borum. Philosophie : le Path of Unfoldment révèle ce qui est déjà là — il ne construit pas, il déploie.
+          </p>
+          <p class="section-text" style="margin-bottom:0;">
+            Les séances de découverte sont gratuites. Le groupe hebdomadaire est gratuit à vie après le cycle initial. Ce n'est pas un modèle commercial — c'est un engagement de transmission.
+          </p>
+        </div>
+      </div>
+
+      @media (max-width:540px) { div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns:1fr !important; } }
+    </div>
+  </section>
+
+  <!-- FAQ RAPIDE -->
+  <section class="section">
+    <div class="section-inner">
+      <p class="section-label">Questions fréquentes</p>
+      <h2 class="section-title">Ce qu'on me demande souvent</h2>
+
+      <div class="faq-item">
+        <p class="faq-q">Est-ce que je dois changer de croyances ou de mode de vie ?</p>
+        <p class="faq-a">Non. La méthode IFSU ne demande ni adhésion philosophique, ni changement de régime, ni engagement spirituel particulier. Tu gardes tes convictions. Tu ajoutes une pratique.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">C'est quoi la différence avec la mindfulness ?</p>
+        <p class="faq-a">La méditation védique IFSU n'est pas de la pleine conscience. Ce sont deux approches distinctes, avec des fondements, des techniques et des objectifs différents. On ne les compare pas — on les distingue.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Combien de temps ça prend par jour ?</p>
+        <p class="faq-a">La pratique commence à 20 minutes par session. Elle évolue progressivement au fil du cycle — selon ton rythme, selon ce que ta technique demande. On n'annonce pas de durée finale d'emblée.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Est-ce que je peux faire yoga et méditation IFSU en même temps ?</p>
+        <p class="faq-a">Oui. Ce sont deux pratiques distinctes, deux lignes éditoriales séparées. Elles ne se mélangent pas dans les séances — mais elles coexistent très bien chez les pratiquants.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="section section-dark text-center">
+    <div class="section-inner">
+      <p class="section-label">Première étape</p>
+      <h2 class="section-title" style="color:var(--lin);">Session découverte — gratuite</h2>
+      <p class="section-text" style="max-width:480px;margin:0 auto 2rem;">
+        Individuelle, sur rendez-vous. On se rencontre, tu poses tes questions, tu repars sans engagement.
+      </p>
+      <a href="mailto:ifsu@etik.com" class="btn btn-gold">ifsu@etik.com</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <svg class="footer-emblem" width="52" height="52" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="28" cy="28" r="26" fill="none" stroke="#C9A84C" stroke-width="0.7" opacity="0.7"/>
+      <circle cx="28" cy="28" r="21" fill="none" stroke="#C9A84C" stroke-width="0.7" opacity="0.6"/>
+      <circle cx="28" cy="28" r="16" fill="none" stroke="#C9A84C" stroke-width="0.7" opacity="0.5"/>
+      <circle cx="28" cy="28" r="11" fill="none" stroke="#C9A84C" stroke-width="0.7" opacity="0.4"/>
+      <circle cx="28" cy="28" r="6"  fill="none" stroke="#C9A84C" stroke-width="0.7" opacity="0.3"/>
+      <circle cx="28"   cy="2"    r="2" fill="#C9A84C" opacity="0.6"/>
+      <circle cx="47.5" cy="9.5"  r="2" fill="#C9A84C" opacity="0.6"/>
+      <circle cx="54"   cy="28"   r="2" fill="#C9A84C" opacity="0.6"/>
+      <circle cx="47.5" cy="46.5" r="2" fill="#C9A84C" opacity="0.6"/>
+      <circle cx="28"   cy="54"   r="2" fill="#C9A84C" opacity="0.6"/>
+      <circle cx="8.5"  cy="46.5" r="2" fill="#C9A84C" opacity="0.6"/>
+      <circle cx="2"    cy="28"   r="2" fill="#C9A84C" opacity="0.6"/>
+      <circle cx="8.5"  cy="9.5"  r="2" fill="#C9A84C" opacity="0.6"/>
+      <circle cx="38"   cy="3.5"  r="2" fill="#C9A84C" opacity="0.4"/>
+      <defs>
+        <linearGradient id="ffm" x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0%" stop-color="#C4714A"/>
+          <stop offset="100%" stop-color="#F0EAE0"/>
+        </linearGradient>
+      </defs>
+      <ellipse cx="28" cy="26" rx="3" ry="5" fill="url(#ffm)" opacity="0.8"/>
+    </svg>
+    <p class="footer-name">IFSU Équilibre</p>
+    <p class="footer-tagline">Marjorie Mathieu · Ath, Hainaut</p>
+    <div class="footer-divider"></div>
+    <div class="footer-contact">
+      <a href="mailto:ifsu@etik.com">ifsu@etik.com</a><br>
+      <a href="tel:+32477091803">0477 09 18 03</a>
+    </div>
+    <div class="footer-social">
+      <a href="https://facebook.com/IFSU.Yoga.Meditation.Ath" target="_blank">Facebook</a>
+      <a href="https://mastodon.social/@IFSUYogameditation" target="_blank">Mastodon</a>
+    </div>
+    <p class="footer-legal">© 2026 IFSU Équilibre · Production Associée via Smart · <a href="https://ifsu-equilibre.be" style="color:inherit;">ifsu-equilibre.be</a></p>
+  </footer>
+
+  <script>
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('nav-links');
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>
