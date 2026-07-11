@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Qui étudie vraiment le yoga : indianistes et maîtres de tradition — Les Carnets de la Tradition</title>
+<meta name="description" content="Une liste de référence : les chercheurs universitaires et les maîtres de tradition dont le travail sur le yoga et le tantra repose sur les textes, l'histoire et la filiation.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   IFSU Équilibre — Feuille de style partagée
+   Palette : ardoise / lin / terracotta / gold / anthracite
+   Typo : Cormorant Garamond (titres) + DM Sans (corps)
+   ============================================================ */
+
+:root {
+  --ardoise:      #4A6274;
+  --ardoise-dark: #2C3F52;
+  --lin:          #F7F3EE;
+  --lin-deep:     #EDE8E0;
+  --terracotta:   #C4714A;
+  --gold:         #C9A84C;
+  --anthracite:   #2C2C2C;
+  --gris-bleuté:  #7A9AB0;
+  --blanc:        #FFFFFF;
+
+  --font-titre: 'Cormorant Garamond', Georgia, serif;
+  --font-corps: 'DM Sans', system-ui, sans-serif;
+
+  --max-w: 860px;
+  --max-w-large: 1100px;
+  --nav-h: 68px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-corps);
+  font-weight: 300;
+  color: var(--anthracite);
+  background: var(--lin);
+  font-size: 17px;
+  line-height: 1.7;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  background: var(--ardoise-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  z-index: 100;
+}
+.nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+.nav-logo-text {
+  font-family: var(--font-titre);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--lin);
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+.nav-logo-text span {
+  display: block;
+  font-size: 0.7rem;
+  font-family: var(--font-corps);
+  font-weight: 300;
+  color: var(--gris-bleuté);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a {
+  font-family: var(--font-corps);
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: var(--lin);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--gold); border-bottom-color: var(--gold); }
+
+.nav-burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.nav-burger span { display: block; width: 24px; height: 1.5px; background: var(--lin); transition: transform 0.3s, opacity 0.3s; }
+.nav-burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-burger.open span:nth-child(2) { opacity: 0; }
+.nav-burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+@media (max-width: 700px) {
+  .nav-burger { display: flex; }
+  .nav-links {
+    display: none; position: absolute; top: var(--nav-h); left: 0; right: 0;
+    background: var(--ardoise-dark); flex-direction: column; gap: 0; padding: 0.5rem 0 1rem;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links li { padding: 0; }
+  .nav-links a { display: block; padding: 0.75rem 2rem; border-bottom: none; font-size: 0.9rem; }
+}
+
+.page-body { padding-top: var(--nav-h); }
+.section { padding: 5rem 2rem; }
+.section-inner { max-width: var(--max-w); margin: 0 auto; }
+.section-title {
+  font-family: var(--font-titre);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 300;
+  line-height: 1.15;
+  color: var(--ardoise-dark);
+  margin-bottom: 1.5rem;
+}
+
+.carnet-tag {
+  display: inline-block; width: fit-content;
+  font-family: var(--font-corps); font-size: .68rem; font-weight: 500;
+  letter-spacing: .14em; text-transform: uppercase;
+  padding: .3rem .7rem; border: 1px solid currentColor;
+}
+.carnet-tag.editorial { color: var(--anthracite); }
+
+.article-back {
+  font-family: var(--font-corps); font-size: .75rem; font-weight: 500;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--ardoise);
+  text-decoration: none; display: inline-flex; align-items: center; gap: .5rem; margin-bottom: 2rem;
+}
+.article-back:hover { color: var(--terracotta); }
+.article-meta-line { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.article-date { font-family: var(--font-corps); font-size: .78rem; color: #888; letter-spacing: .03em; }
+.article-body { max-width: var(--max-w); margin: 0 auto; }
+.article-body p { font-size: 1.02rem; line-height: 1.85; color: #444; margin-bottom: 1.4rem; }
+.article-h2 {
+  font-family: var(--font-titre); font-size: 1.35rem; font-weight: 500;
+  color: var(--ardoise-dark); margin: 2.5rem 0 1rem;
+}
+.article-signature {
+  margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--lin-deep);
+  font-family: var(--font-titre); font-style: italic; color: var(--ardoise); font-size: 1rem;
+}
+
+.formation-list { list-style: none; margin-top: 1rem; }
+.formation-list li {
+  font-size: 0.95rem; color: #444; padding: 0.55rem 0; border-bottom: 1px solid var(--lin-deep);
+  padding-left: 1rem; position: relative; line-height: 1.6;
+}
+.formation-list li::before { content: '—'; position: absolute; left: 0; color: var(--gold); }
+
+.info-bloc { background: var(--blanc); border-top: 2px solid var(--terracotta); padding: 1.75rem 2rem; margin: 2.5rem 0; }
+.info-bloc-title {
+  font-family: var(--font-corps); font-size: 0.72rem; font-weight: 500;
+  letter-spacing: 0.15em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 1rem;
+}
+.info-bloc p { font-size: .92rem; color: #444; margin-bottom: .9rem; }
+.info-bloc p:last-child { margin-bottom: 0; }
+
+.btn {
+  display: inline-block; font-family: var(--font-corps); font-size: 0.8rem; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none;
+  padding: 0.75rem 1.75rem; border: 1px solid currentColor; transition: background 0.2s, color 0.2s; cursor: pointer;
+}
+.btn-terracotta { color: var(--terracotta); border-color: var(--terracotta); }
+.btn-terracotta:hover { background: var(--terracotta); color: var(--lin); }
+.btn-ardoise { color: var(--ardoise); border-color: var(--ardoise); }
+.btn-ardoise:hover { background: var(--ardoise); color: var(--lin); }
+
+.marquee-bar {
+  background: var(--ardoise-dark); color: var(--lin); overflow: hidden; white-space: nowrap;
+  border-bottom: 1px solid rgba(201,168,76,.35); position: relative;
+}
+.marquee-track { display: inline-flex; align-items: center; animation: marquee 34s linear infinite; will-change: transform; }
+.marquee-track span {
+  display: inline-block; padding: .6rem 0; font-family: var(--font-corps); font-size: .78rem;
+  font-weight: 400; letter-spacing: .04em; color: var(--lin); white-space: nowrap; padding-right: 3.5rem;
+}
+.marquee-track span b { color: var(--gold); font-weight: 500; }
+@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; overflow-x: auto; } }
+
+.footer { background: var(--ardoise-dark); padding: 4rem 2rem 2.5rem; text-align: center; }
+.footer-name { font-family: var(--font-titre); font-size: 1.4rem; font-weight: 300; color: var(--lin); margin-bottom: 0.25rem; }
+.footer-tagline {
+  font-family: var(--font-corps); font-size: 0.75rem; font-weight: 300; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--gris-bleuté); margin-bottom: 2rem;
+}
+.footer-contact { font-size: 0.9rem; color: rgba(247,243,238,0.75); line-height: 2; margin-bottom: 2rem; }
+.footer-contact a { color: var(--lin); text-decoration: none; }
+.footer-contact a:hover { color: var(--gold); }
+.footer-social { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 2.5rem; }
+.footer-social a {
+  font-family: var(--font-corps); font-size: 0.75rem; font-weight: 400; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--gris-bleuté); text-decoration: none; transition: color 0.2s;
+}
+.footer-social a:hover { color: var(--gold); }
+.footer-divider { width: 32px; height: 1px; background: rgba(201,168,76,0.3); margin: 0 auto 1.5rem; }
+.footer-legal { font-size: 0.75rem; color: rgba(122,154,176,0.6); letter-spacing: 0.06em; }
+</style>
+</head>
+<body class="page-body">
+
+<div class="marquee-bar">
+  <div class="marquee-track">
+    <span><b>Rentrée septembre 2026</b> — tous les cours au Studio IFSU Ath &nbsp;•&nbsp; nouveaux horaires : mardi 17h30–19h00 &amp; 19h30–21h00, mercredi 9h00–10h30, 17h30–19h00 &amp; 19h30–21h00 &nbsp;•&nbsp; tarifs : 15€/séance · 48€ abonnement 4 séances/mois · 60€ abonnement 5 séances/mois · carte de fidélité 150€/10 séances (11<sup>e</sup> à -50%, valable 4 mois)</span>
+    <span aria-hidden="true"><b>Rentrée septembre 2026</b> — tous les cours au Studio IFSU Ath &nbsp;•&nbsp; nouveaux horaires : mardi 17h30–19h00 &amp; 19h30–21h00, mercredi 9h00–10h30, 17h30–19h00 &amp; 19h30–21h00 &nbsp;•&nbsp; tarifs : 15€/séance · 48€ abonnement 4 séances/mois · 60€ abonnement 5 séances/mois · carte de fidélité 150€/10 séances (11<sup>e</sup> à -50%, valable 4 mois)</span>
+  </div>
+</div>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <svg width="36" height="36" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="28" cy="28" r="26" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.9"/>
+      <circle cx="28" cy="28" r="21" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.8"/>
+      <circle cx="28" cy="28" r="16" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.7"/>
+      <circle cx="28" cy="28" r="11" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.6"/>
+      <circle cx="28" cy="28" r="6"  fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.5"/>
+      <circle cx="28" cy="2" r="2.4" fill="#C9A84C" opacity="0.75"/>
+      <circle cx="47.5" cy="9.5" r="2.4" fill="#C9A84C" opacity="0.75"/>
+      <circle cx="54" cy="28" r="2.4" fill="#C9A84C" opacity="0.75"/>
+      <circle cx="47.5" cy="46.5" r="2.4" fill="#C9A84C" opacity="0.75"/>
+      <circle cx="28" cy="54" r="2.4" fill="#C9A84C" opacity="0.75"/>
+      <circle cx="8.5" cy="46.5" r="2.4" fill="#C9A84C" opacity="0.75"/>
+      <circle cx="2" cy="28" r="2.4" fill="#C9A84C" opacity="0.75"/>
+      <circle cx="8.5" cy="9.5" r="2.4" fill="#C9A84C" opacity="0.75"/>
+      <defs><linearGradient id="fn" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#C4714A"/><stop offset="100%" stop-color="#F0EAE0"/></linearGradient></defs>
+      <ellipse cx="28" cy="26" rx="3" ry="5" fill="url(#fn)" opacity="0.9"/>
+    </svg>
+    <span class="nav-logo-text">IFSU Équilibre<span>Ath · Hainaut</span></span>
+  </a>
+  <button class="nav-burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="yoga.html">Yoga</a></li>
+    <li><a href="meditation.html">Méditation</a></li>
+    <li><a href="carnets.html" class="active">Carnets</a></li>
+    <li><a href="ateliers.html">Ateliers</a></li>
+    <li><a href="retraite.html">Retraite</a></li>
+  </ul>
+</nav>
+
+<article class="section" style="padding-bottom:2rem;">
+  <div class="article-body">
+    <a href="carnets.html" class="article-back">← Les Carnets de la Tradition</a>
+    <div class="article-meta-line">
+      <span class="carnet-tag editorial">Éditorial</span>
+      <span class="article-date">Lecture ~4 min</span>
+    </div>
+    <h1 class="section-title" style="font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:2rem;">Qui étudie vraiment le yoga : indianistes et maîtres de tradition</h1>
+
+    <p>Le yoga a un siècle de textes universitaires derrière lui. Philologie sanskrite, histoire des religions, anthropologie de l'Inde : des chercheurs ont passé des décennies sur les manuscrits, les datations, les lignées. Voici une liste de travail — pas exhaustive, mais vérifiable — pour qui veut lire la source plutôt que le résumé.</p>
+
+    <h2 class="article-h2">Les indianistes et académiques</h2>
+    <p>Approche philologique et historique. Ce sont les chercheurs qui établissent les faits : datation des textes, traduction, contexte.</p>
+    <ul class="formation-list">
+      <li><strong>Alexis Sanderson</strong> — référence mondiale sur le tantra et le shivaïsme du Cachemire.</li>
+      <li><strong>David Gordon White</strong> — spécialiste de l'alchimie corporelle et du tantra.</li>
+      <li><strong>James Mallinson</strong> — historien du Hatha-Yoga et éditeur de textes sanskrits.</li>
+      <li><strong>Mark Singleton</strong> — historien du yoga moderne, sur la formation du yoga postural du XXe siècle.</li>
+      <li><strong>Elizabeth De Michelis</strong> — analyse critique de la réception du yoga en Occident.</li>
+      <li><strong>Edwin Bryant</strong> — traducteur et commentateur des Yoga-Sûtra de Patañjali.</li>
+      <li><strong>Mircea Eliade</strong> — historien des religions, auteur de référence sur le yoga et l'immortalité.</li>
+      <li><strong>Georg Feuerstein</strong> — érudit couvrant à la fois la tradition et la philosophie du yoga.</li>
+      <li><strong>Tara Michaël</strong> — indianiste, chercheuse CNRS, traductrice de la Hatha-Yoga-Pradîpikâ.</li>
+      <li><strong>Louis Renou</strong> — grammairien et indianiste de référence en langue française.</li>
+      <li><strong>Heinrich Zimmer</strong> — mythologie et philosophie indiennes.</li>
+      <li><strong>Johannes Bronkhorst</strong> — philosophie indienne ancienne et bouddhisme.</li>
+      <li><strong>Axel Michaels</strong> — hindouisme et rituels, approche anthropologique.</li>
+      <li><strong>Sheldon Pollock</strong> — philologie sanskrite et histoire intellectuelle de l'Inde.</li>
+    </ul>
+
+    <h2 class="article-h2">Les maîtres de tradition</h2>
+    <p>Approche pratique et philosophique, transmise dans une lignée identifiable — pas une synthèse commerciale occidentale.</p>
+    <ul class="formation-list">
+      <li><strong>Swami Vivekananda</strong> — Vedânta, Râja-Yoga, lecture rationaliste.</li>
+      <li><strong>Swami Kuvalayananda</strong> — pionnier de la recherche scientifique sur les effets du yoga.</li>
+      <li><strong>Swami Satyananda Saraswati</strong> — tradition tantrique, fondateur de la Bihar School of Yoga.</li>
+      <li><strong>Sri Aurobindo</strong> — philosophie du Yoga Intégral.</li>
+    </ul>
+
+    <div class="info-bloc">
+      <p class="info-bloc-title">Pourquoi cette liste existe</p>
+      <p>Un nom ne vaut rien seul. Ce qui compte, c'est ce qu'il a lu, traduit, daté — et dans quelle lignée il situe son travail. Cette liste sert de point de départ pour vérifier une affirmation avant de la répéter.</p>
+    </div>
+
+    <p class="article-signature">Marjorie Mathieu — IFSU Équilibre</p>
+    <a href="carnets.html" class="article-back" style="margin-top:1rem;">← Retour aux Carnets</a>
+  </div>
+</article>
+
+<!-- CONTACT -->
+<section style="background:var(--ardoise);padding:3rem 2rem;text-align:center;margin-top:3rem;">
+  <h2 style="font-family:var(--font-titre);font-size:1.6rem;font-weight:300;color:var(--lin);margin-bottom:1.25rem;">Une question ? Un doute ?</h2>
+  <p style="font-size:.9rem;color:rgba(247,243,238,.8);margin-bottom:.3rem;">Écris à <a href="mailto:ifsu@etik.com" style="color:var(--lin);">ifsu@etik.com</a></p>
+  <p style="font-size:.9rem;color:rgba(247,243,238,.8);">Ou par WhatsApp au <a href="tel:+32477091803" style="color:var(--lin);">0477 09 18 03</a></p>
+  <p style="margin-top:1rem;font-size:.82rem;color:rgba(247,243,238,.4);">Réservations via <a href="https://momoyoga.com/ifsu" target="_blank" style="color:rgba(247,243,238,.5);">momoyoga.com/ifsu</a></p>
+</section>
+
+<footer class="footer">
+  <p class="footer-name">IFSU Équilibre</p>
+  <p class="footer-tagline">Marjorie Mathieu · Ath, Hainaut</p>
+  <div class="footer-divider"></div>
+  <div class="footer-contact"><a href="mailto:ifsu@etik.com">ifsu@etik.com</a><br><a href="tel:+32477091803">0477 09 18 03</a></div>
+  <div class="footer-social">
+    <a href="https://facebook.com/IFSU.Yoga.Meditation.Ath" target="_blank">Facebook</a>
+    <a href="https://mastodon.social/@IFSUYogameditation" target="_blank">Mastodon</a>
+  </div>
+  <p class="footer-legal">© 2026 IFSU Équilibre · <a href="https://ifsu-equilibre.be" style="color:inherit;">ifsu-equilibre.be</a></p>
+</footer>
+<script>document.getElementById('burger').addEventListener('click',function(){this.classList.toggle('open');document.getElementById('nav-links').classList.toggle('open');});</script>
+</body></html>
