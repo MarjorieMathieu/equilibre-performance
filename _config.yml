@@ -1,3 +1,5 @@
 collections:
   carnets:
     output: true
+  ateliers:
+    output: true
