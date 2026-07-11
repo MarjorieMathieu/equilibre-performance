@@ -1,0 +1,1057 @@
+---
+---
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Les Carnets de la Tradition — IFSU Équilibre · Ath</title>
+<meta name="description" content="Études critiques et analyse historique des fondements du corps subtil. Yoga Viniyoga et méditation védique IFSU, sources et textes de référence.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   IFSU Équilibre — Feuille de style partagée
+   Palette : ardoise / lin / terracotta / gold / anthracite
+   Typo : Cormorant Garamond (titres) + DM Sans (corps)
+   ============================================================ */
+
+:root {
+  --ardoise:      #4A6274;
+  --ardoise-dark: #2C3F52;
+  --lin:          #F7F3EE;
+  --lin-deep:     #EDE8E0;
+  --terracotta:   #C4714A;
+  --gold:         #C9A84C;
+  --anthracite:   #2C2C2C;
+  --gris-bleuté:  #7A9AB0;
+  --blanc:        #FFFFFF;
+
+  --font-titre: 'Cormorant Garamond', Georgia, serif;
+  --font-corps: 'DM Sans', system-ui, sans-serif;
+
+  --max-w: 860px;
+  --max-w-large: 1100px;
+  --nav-h: 68px;
+}
+
+/* Reset */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-corps);
+  font-weight: 300;
+  color: var(--anthracite);
+  background: var(--lin);
+  font-size: 17px;
+  line-height: 1.7;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  background: var(--ardoise-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  z-index: 100;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.nav-logo-text {
+  font-family: var(--font-titre);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--lin);
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+
+.nav-logo-text span {
+  display: block;
+  font-size: 0.7rem;
+  font-family: var(--font-corps);
+  font-weight: 300;
+  color: var(--gris-bleuté);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: var(--font-corps);
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: var(--lin);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+/* Burger */
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+.nav-burger span {
+  display: block;
+  width: 24px;
+  height: 1.5px;
+  background: var(--lin);
+  transition: transform 0.3s, opacity 0.3s;
+}
+.nav-burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-burger.open span:nth-child(2) { opacity: 0; }
+.nav-burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* Mobile nav */
+@media (max-width: 700px) {
+  .nav-burger { display: flex; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: var(--nav-h);
+    left: 0; right: 0;
+    background: var(--ardoise-dark);
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem 0 1rem;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links li { padding: 0; }
+  .nav-links a {
+    display: block;
+    padding: 0.75rem 2rem;
+    border-bottom: none;
+    font-size: 0.9rem;
+  }
+}
+
+/* ============================================================
+   LAYOUT GÉNÉRAL
+   ============================================================ */
+
+.page-body {
+  padding-top: var(--nav-h);
+}
+
+.section {
+  padding: 5rem 2rem;
+}
+
+.section-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.section-inner-large {
+  max-width: var(--max-w-large);
+  margin: 0 auto;
+}
+
+.section-label {
+  font-family: var(--font-corps);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-family: var(--font-titre);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 300;
+  line-height: 1.15;
+  color: var(--ardoise-dark);
+  margin-bottom: 1.5rem;
+}
+
+.section-subtitle {
+  font-family: var(--font-titre);
+  font-size: 1.35rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ardoise);
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+
+.section-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 1.2rem;
+}
+
+/* Séparateur */
+.divider {
+  width: 48px;
+  height: 1px;
+  background: var(--gold);
+  margin: 2.5rem 0;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.hero {
+  background: var(--ardoise-dark);
+  padding: 7rem 2rem 6rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 60% 40%, rgba(201,168,76,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-emblem {
+  margin: 0 auto 2rem;
+  opacity: 0.9;
+}
+
+.hero-title {
+  font-family: var(--font-titre);
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 300;
+  color: var(--lin);
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.hero-sub {
+  font-family: var(--font-titre);
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-style: italic;
+  color: var(--gris-bleuté);
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+}
+
+.hero-tagline {
+  font-family: var(--font-corps);
+  font-size: 0.85rem;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ============================================================
+   BOUTONS & CTA
+   ============================================================ */
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-corps);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.75rem 1.75rem;
+  border: 1px solid currentColor;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+
+.btn-terracotta {
+  color: var(--terracotta);
+  border-color: var(--terracotta);
+}
+.btn-terracotta:hover {
+  background: var(--terracotta);
+  color: var(--lin);
+}
+
+.btn-gold {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+.btn-gold:hover {
+  background: var(--gold);
+  color: var(--ardoise-dark);
+}
+
+.btn-ardoise {
+  color: var(--ardoise);
+  border-color: var(--ardoise);
+}
+.btn-ardoise:hover {
+  background: var(--ardoise);
+  color: var(--lin);
+}
+
+.btn-light {
+  color: var(--lin);
+  border-color: rgba(247,243,238,0.4);
+}
+.btn-light:hover {
+  background: rgba(247,243,238,0.1);
+}
+
+/* ============================================================
+   SECTIONS ALTERNÉES (fond clair / fond crème profond)
+   ============================================================ */
+
+.section-alt {
+  background: var(--lin-deep);
+}
+
+.section-dark {
+  background: var(--ardoise-dark);
+  color: var(--lin);
+}
+
+.section-dark .section-title { color: var(--lin); }
+.section-dark .section-text { color: rgba(247,243,238,0.8); }
+.section-dark .section-label { color: var(--gold); }
+
+/* ============================================================
+   GRILLE CARTES
+   ============================================================ */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.card {
+  background: var(--blanc);
+  padding: 2rem;
+  border-top: 2px solid var(--gold);
+}
+
+.card-title {
+  font-family: var(--font-titre);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--ardoise-dark);
+  margin-bottom: 0.75rem;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+/* ============================================================
+   TABLEAU HORAIRES
+   ============================================================ */
+
+.horaires-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+.horaires-table th {
+  font-family: var(--font-corps);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ardoise);
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--lin-deep);
+  text-align: left;
+}
+
+.horaires-table td {
+  padding: 1rem 1rem;
+  border-bottom: 1px solid var(--lin-deep);
+  vertical-align: top;
+  color: #444;
+}
+
+.horaires-table tr:last-child td { border-bottom: none; }
+
+.horaires-table .jour {
+  font-weight: 500;
+  color: var(--ardoise-dark);
+  white-space: nowrap;
+}
+
+.horaires-table .tarif {
+  color: var(--terracotta);
+  font-weight: 400;
+}
+
+.horaires-table a {
+  color: var(--ardoise);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .horaires-table thead { display: none; }
+  .horaires-table tr { display: block; padding: 1rem 0; border-bottom: 1px solid var(--lin-deep); }
+  .horaires-table td { display: block; padding: 0.2rem 0; border: none; }
+  .horaires-table td::before {
+    content: attr(data-label) " ";
+    font-weight: 500;
+    color: var(--ardoise);
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+  }
+}
+
+/* ============================================================
+   PHOTOS
+   ============================================================ */
+
+.photo-reduced {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-reduced-sm {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 500px) {
+  .photo-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   BLOC CITATION
+   ============================================================ */
+
+.citation {
+  border-left: 2px solid var(--gold);
+  padding: 0.5rem 0 0.5rem 1.75rem;
+  margin: 2.5rem 0;
+}
+
+.citation-text {
+  font-family: var(--font-titre);
+  font-size: 1.4rem;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--ardoise);
+}
+
+.citation-source {
+  font-size: 0.8rem;
+  color: var(--gris-bleuté);
+  margin-top: 0.5rem;
+  letter-spacing: 0.08em;
+}
+
+/* ============================================================
+   BLOC INFO (tarifs, logistique)
+   ============================================================ */
+
+.info-bloc {
+  background: var(--blanc);
+  border-top: 2px solid var(--terracotta);
+  padding: 1.75rem 2rem;
+  margin-top: 2rem;
+}
+
+.info-bloc-title {
+  font-family: var(--font-corps);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 1rem;
+}
+
+.info-ligne {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--lin-deep);
+  font-size: 0.9rem;
+  gap: 1rem;
+}
+
+.info-ligne:last-child { border-bottom: none; }
+
+.info-ligne-label { color: #555; }
+.info-ligne-valeur { font-weight: 500; color: var(--ardoise-dark); text-align: right; }
+
+/* ============================================================
+   SECTION QUI SUIS-JE
+   ============================================================ */
+
+.qui-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+@media (max-width: 680px) {
+  .qui-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+.formation-list {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.formation-list li {
+  font-size: 0.9rem;
+  color: #555;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--lin-deep);
+  padding-left: 1rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.formation-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.footer {
+  background: var(--ardoise-dark);
+  padding: 4rem 2rem 2.5rem;
+  text-align: center;
+}
+
+.footer-emblem {
+  margin: 0 auto 1.5rem;
+  opacity: 0.85;
+}
+
+.footer-name {
+  font-family: var(--font-titre);
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--lin);
+  margin-bottom: 0.25rem;
+}
+
+.footer-tagline {
+  font-family: var(--font-corps);
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gris-bleuté);
+  margin-bottom: 2rem;
+}
+
+.footer-contact {
+  font-size: 0.9rem;
+  color: rgba(247,243,238,0.75);
+  line-height: 2;
+  margin-bottom: 2rem;
+}
+
+.footer-contact a {
+  color: var(--lin);
+  text-decoration: none;
+}
+
+.footer-contact a:hover { color: var(--gold); }
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.footer-social a {
+  font-family: var(--font-corps);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gris-bleuté);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-social a:hover { color: var(--gold); }
+
+.footer-divider {
+  width: 32px;
+  height: 1px;
+  background: rgba(201,168,76,0.3);
+  margin: 0 auto 1.5rem;
+}
+
+.footer-legal {
+  font-size: 0.75rem;
+  color: rgba(122,154,176,0.6);
+  letter-spacing: 0.06em;
+}
+
+/* ============================================================
+   UTILITAIRES
+   ============================================================ */
+
+.text-center { text-align: center; }
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mt-3 { margin-top: 3rem; }
+.mb-0 { margin-bottom: 0; }
+
+
+/* Hero vidéo plein écran */
+.hero-video {
+  position: relative;
+  height: 100vh;
+  min-height: 560px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ardoise-dark);
+}
+.hero-video video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+}
+.hero-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(44,63,82,0.5) 0%, rgba(44,63,82,0.75) 100%);
+}
+.hero-video-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Grille 4 univers */
+.univers-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 0;
+}
+@media(max-width:680px){ .univers-grid { grid-template-columns: 1fr; } }
+.univers-card {
+  padding: 3rem 2.5rem;
+  border: 1px solid var(--lin-deep);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-decoration: none;
+  color: inherit;
+  transition: background .25s;
+}
+.univers-card:hover { background: var(--blanc); }
+.univers-card:nth-child(1) { border-top: 3px solid var(--terracotta); }
+.univers-card:nth-child(2) { border-top: 3px solid var(--gold); }
+.univers-card:nth-child(3) { border-top: 3px solid var(--ardoise); }
+.univers-card:nth-child(4) { border-top: 3px solid var(--gris-bleuté); }
+.univers-card-label {
+  font-family: var(--font-corps);
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+}
+.univers-card:nth-child(1) .univers-card-label { color: var(--terracotta); }
+.univers-card:nth-child(2) .univers-card-label { color: var(--gold); }
+.univers-card:nth-child(3) .univers-card-label { color: var(--ardoise); }
+.univers-card:nth-child(4) .univers-card-label { color: var(--gris-bleuté); }
+
+/* Bandeau Carnets sous la grille */
+.carnets-strip {
+  border: 1px solid var(--lin-deep);
+  border-top: none;
+  padding: 2.5rem 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  background: var(--lin-deep);
+}
+.carnets-strip-text { max-width: 560px; }
+.carnets-strip-label {
+  font-family: var(--font-corps);
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--ardoise);
+  margin-bottom: .6rem;
+  display: block;
+}
+.carnets-strip-title {
+  font-family: var(--font-titre);
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ardoise-dark);
+  line-height: 1.35;
+}
+
+/* Bandeau défilant — annonces */
+.marquee-bar {
+  background: var(--ardoise-dark);
+  color: var(--lin);
+  overflow: hidden;
+  white-space: nowrap;
+  border-bottom: 1px solid rgba(201,168,76,.35);
+  position: relative;
+}
+.marquee-track {
+  display: inline-flex;
+  align-items: center;
+  animation: marquee 34s linear infinite;
+  will-change: transform;
+}
+.marquee-track span {
+  display: inline-block;
+  padding: .6rem 0;
+  font-family: var(--font-corps);
+  font-size: .78rem;
+  font-weight: 400;
+  letter-spacing: .04em;
+  color: var(--lin);
+  white-space: nowrap;
+  padding-right: 3.5rem;
+}
+.marquee-track span b {
+  color: var(--gold);
+  font-weight: 500;
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; overflow-x: auto; }
+}
+.univers-card-title {
+  font-family: var(--font-titre);
+  font-size: 1.7rem;
+  font-weight: 300;
+  color: var(--ardoise-dark);
+  line-height: 1.2;
+}
+.univers-card-text {
+  font-size: .9rem;
+  color: #555;
+  line-height: 1.75;
+  flex: 1;
+}
+.univers-card-link {
+  font-family: var(--font-corps);
+  font-size: .75rem;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ardoise);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  transition: color .2s;
+}
+.univers-card-link::after { content: '→'; }
+.univers-card:hover .univers-card-link { color: var(--terracotta); }
+
+/* ============================================================
+   PAGE CARNETS — grille d'articles
+   ============================================================ */
+.carnet-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 2.5rem;
+  max-width: var(--max-w-large);
+  margin: 0 auto;
+}
+@media(max-width:680px){ .carnet-grid { grid-template-columns: 1fr; } }
+.carnet-card {
+  padding: 2.25rem;
+  background: var(--blanc);
+  border: 1px solid var(--lin-deep);
+  display: flex;
+  flex-direction: column;
+  gap: .9rem;
+}
+.carnet-tag {
+  display: inline-block;
+  width: fit-content;
+  font-family: var(--font-corps);
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  padding: .3rem .7rem;
+  border: 1px solid currentColor;
+}
+.carnet-tag.yoga { color: var(--terracotta); }
+.carnet-tag.meditation { color: var(--ardoise); }
+.carnet-tag.editorial { color: var(--anthracite); }
+
+/* ============================================================
+   PAGE ARTICLE INDIVIDUEL
+   ============================================================ */
+.article-back {
+  font-family: var(--font-corps);
+  font-size: .75rem;
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--ardoise);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: 2rem;
+}
+.article-back:hover { color: var(--terracotta); }
+.article-meta-line {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+.article-date {
+  font-family: var(--font-corps);
+  font-size: .78rem;
+  color: #888;
+  letter-spacing: .03em;
+}
+.article-body { max-width: var(--max-w); margin: 0 auto; }
+.article-body p {
+  font-size: 1.02rem;
+  line-height: 1.85;
+  color: #444;
+  margin-bottom: 1.4rem;
+}
+.article-h2 {
+  font-family: var(--font-titre);
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--ardoise-dark);
+  margin: 2.5rem 0 1rem;
+}
+.article-signature {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--lin-deep);
+  font-family: var(--font-titre);
+  font-style: italic;
+  color: var(--ardoise);
+  font-size: 1rem;
+}
+.carnet-card-title {
+  font-family: var(--font-titre);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--ardoise-dark);
+  line-height: 1.25;
+}
+.carnet-card-text {
+  font-size: .92rem;
+  color: #555;
+  line-height: 1.75;
+  flex: 1;
+}
+.carnet-card-meta {
+  font-family: var(--font-corps);
+  font-size: .72rem;
+  color: #888;
+  letter-spacing: .04em;
+}
+.carnet-card-link {
+  font-family: var(--font-corps);
+  font-size: .75rem;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ardoise);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
+.carnet-card-link::after { content: '→'; }
+.carnet-card-link:hover { color: var(--terracotta); }
+.carnet-note {
+  max-width: var(--max-w);
+  margin: 0 auto 3rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--lin-deep);
+  border-left: 3px solid var(--gold);
+  font-size: .85rem;
+  color: #555;
+  line-height: 1.7;
+}
+</style>
+<body class="page-body">
+
+<div class="marquee-bar">
+  <div class="marquee-track">
+    <span><b>Rentrée septembre 2026</b> — tous les cours au Studio IFSU Ath &nbsp;•&nbsp; nouveaux horaires : mardi 17h30–19h00 &amp; 19h30–21h00, mercredi 9h00–10h30, 17h30–19h00 &amp; 19h30–21h00 &nbsp;•&nbsp; tarifs : 15€/séance · 48€ abonnement 4 séances/mois · 60€ abonnement 5 séances/mois · carte de fidélité 150€/10 séances (11<sup>e</sup> à -50%, valable 4 mois)</span>
+    <span aria-hidden="true"><b>Rentrée septembre 2026</b> — tous les cours au Studio IFSU Ath &nbsp;•&nbsp; nouveaux horaires : mardi 17h30–19h00 &amp; 19h30–21h00, mercredi 9h00–10h30, 17h30–19h00 &amp; 19h30–21h00 &nbsp;•&nbsp; tarifs : 15€/séance · 48€ abonnement 4 séances/mois · 60€ abonnement 5 séances/mois · carte de fidélité 150€/10 séances (11<sup>e</sup> à -50%, valable 4 mois)</span>
+  </div>
+</div>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <svg width="36" height="36" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="28" cy="28" r="26" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.9"/>
+      <circle cx="28" cy="28" r="21" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.8"/>
+      <circle cx="28" cy="28" r="16" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.7"/>
+      <circle cx="28" cy="28" r="11" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.6"/>
+      <circle cx="28" cy="28" r="6"  fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.5"/>
+      <circle cx="28" cy="2" r="2.4" fill="#C9A84C" opacity="0.75"/>
+      <circle cx="47.5" cy="9.5" r="2.4" fill="#C9A84C" opacity="0.75"/>
+      <circle cx="54" cy="28" r="2.4" fill="#C9A84C" opacity="0.75"/>
+      <circle cx="47.5" cy="46.5" r="2.4" fill="#C9A84C" opacity="0.75"/>
+      <circle cx="28" cy="54" r="2.4" fill="#C9A84C" opacity="0.75"/>
+      <circle cx="8.5" cy="46.5" r="2.4" fill="#C9A84C" opacity="0.75"/>
+      <circle cx="2" cy="28" r="2.4" fill="#C9A84C" opacity="0.75"/>
+      <circle cx="8.5" cy="9.5" r="2.4" fill="#C9A84C" opacity="0.75"/>
+      <defs><linearGradient id="fn" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#C4714A"/><stop offset="100%" stop-color="#F0EAE0"/></linearGradient></defs>
+      <ellipse cx="28" cy="26" rx="3" ry="5" fill="url(#fn)" opacity="0.9"/>
+    </svg>
+    <span class="nav-logo-text">IFSU Équilibre<span>Ath · Hainaut</span></span>
+  </a>
+  <button class="nav-burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="yoga.html">Yoga</a></li>
+    <li><a href="meditation.html">Méditation</a></li>
+    <li><a href="carnets.html" class="active">Carnets</a></li>
+    <li><a href="ateliers.html">Ateliers</a></li>
+    <li><a href="retraite.html">Retraite</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <svg class="hero-emblem" width="56" height="56" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="28" cy="28" r="26" fill="none" stroke="#C9A84C" stroke-width="0.7" opacity="0.9"/>
+    <circle cx="28" cy="28" r="21" fill="none" stroke="#C9A84C" stroke-width="0.7" opacity="0.8"/>
+    <circle cx="28" cy="28" r="16" fill="none" stroke="#C9A84C" stroke-width="0.7" opacity="0.7"/>
+    <circle cx="28" cy="28" r="11" fill="none" stroke="#C9A84C" stroke-width="0.7" opacity="0.6"/>
+    <circle cx="28" cy="28" r="6"  fill="none" stroke="#C9A84C" stroke-width="0.7" opacity="0.5"/>
+  </svg>
+  <h1 class="hero-title">Les Carnets de la Tradition</h1>
+  <p class="hero-sub">Études critiques et analyse historique des fondements du corps subtil</p>
+  <p class="hero-tagline">Sources classiques · lecture technique · sans vulgarisation</p>
+</section>
+
+<!-- INTRO -->
+<section class="section">
+  <div class="section-inner text-center">
+    <p class="section-text" style="max-width:620px;margin:0 auto 1rem;">On y traite les textes, pas les tendances. Corps subtil, techniques védiques, lignées de transmission — chaque article part d'une source identifiable, jamais d'une intuition.</p>
+    <p class="section-text" style="max-width:620px;margin:0 auto;">Deux lignes éditoriales, jamais mêlées : le yoga d'un côté, la méditation védique IFSU de l'autre. Chacune a ses textes, ses auteurs, ses exigences.</p>
+    <div class="divider" style="margin:2.5rem auto;"></div>
+  </div>
+</section>
+
+<!-- GRILLE ARTICLES -->
+<section class="section" style="padding-top:0;">
+  <div class="carnet-grid">
+{% for carnet in site.carnets reversed %}
+    <article class="carnet-card">
+      <span class="carnet-tag {{ carnet.tag }}">{{ carnet.tagLabel }}</span>
+      <h2 class="carnet-card-title">{{ carnet.title }}</h2>
+      <p class="carnet-card-text">{{ carnet.excerpt }}</p>
+      <span class="carnet-card-meta">{{ carnet.meta }}</span>
+      <a href="{{ carnet.href }}" class="carnet-card-link">Lire</a>
+    </article>
+{% endfor %}
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section style="background:var(--ardoise);padding:3rem 2rem;text-align:center;margin-top:5rem;">
+  <h2 style="font-family:var(--font-titre);font-size:1.6rem;font-weight:300;color:var(--lin);margin-bottom:1.25rem;">Une question ? Un doute ?</h2>
+  <p style="font-size:.9rem;color:rgba(247,243,238,.8);margin-bottom:.3rem;">Écris à <a href="mailto:ifsu@etik.com" style="color:var(--lin);">ifsu@etik.com</a></p>
+  <p style="font-size:.9rem;color:rgba(247,243,238,.8);">Ou par WhatsApp au <a href="tel:+32477091803" style="color:var(--lin);">0477 09 18 03</a></p>
+  <p style="margin-top:1rem;font-size:.82rem;color:rgba(247,243,238,.4);">Réservations via <a href="https://momoyoga.com/ifsu" target="_blank" style="color:rgba(247,243,238,.5);">momoyoga.com/ifsu</a></p>
+</section>
+
+<footer class="footer">
+  <p class="footer-name">IFSU Équilibre</p>
+  <p class="footer-tagline">Marjorie Mathieu · Ath, Hainaut</p>
+  <div class="footer-divider"></div>
+  <div class="footer-contact"><a href="mailto:ifsu@etik.com">ifsu@etik.com</a><br><a href="tel:+32477091803">0477 09 18 03</a></div>
+  <div class="footer-social">
+    <a href="https://facebook.com/IFSU.Yoga.Meditation.Ath" target="_blank">Facebook</a>
+    <a href="https://mastodon.social/@IFSUYogameditation" target="_blank">Mastodon</a>
+  </div>
+  <p class="footer-legal">© 2026 IFSU Équilibre · <a href="https://ifsu-equilibre.be" style="color:inherit;">ifsu-equilibre.be</a></p>
+</footer>
+<script>document.getElementById('burger').addEventListener('click',function(){this.classList.toggle('open');document.getElementById('nav-links').classList.toggle('open');});</script>
+</body></html>
